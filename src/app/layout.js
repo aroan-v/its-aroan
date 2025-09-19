@@ -18,12 +18,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html
+      data-theme="cupcake"
+      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      lang="en"
+    >
+      <body>{children}</body>
     </html>
   );
 }
