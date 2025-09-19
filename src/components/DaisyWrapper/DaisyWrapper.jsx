@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
 function DaisyWrapper({ children }) {
-  return <div id="daisy-scope">{children}</div>;
+  return <div id="daisy-scope">{children}</div>
 }
 
-export default DaisyWrapper;
+export default DaisyWrapper

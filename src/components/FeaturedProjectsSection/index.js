@@ -1,2 +1,2 @@
-export * from "./FeaturedProjectsSection";
-export { default } from "./FeaturedProjectsSection";
+export * from './FeaturedProjectsSection'
+export { default } from './FeaturedProjectsSection'

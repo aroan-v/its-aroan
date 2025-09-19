@@ -1,2 +1,2 @@
-export * from "./DaisyWrapper";
-export { default } from "./DaisyWrapper";
+export * from './DaisyWrapper'
+export { default } from './DaisyWrapper'

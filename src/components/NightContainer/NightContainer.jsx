@@ -1,6 +1,6 @@
-"use client";
-import React from "react";
-import styled from "styled-components";
+'use client'
+import React from 'react'
+import styled from 'styled-components'
 
 const StyledWrapper = styled.div`
   position: absolute;
@@ -26,11 +26,7 @@ const StyledWrapper = styled.div`
   .blub {
     height: calc(3px * var(--j));
     width: calc(1px * var(--j));
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(173, 216, 230, 1) 100%
-    );
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(173, 216, 230, 1) 100%);
     box-shadow:
       0 0 20px rgba(255, 255, 255, 0.8),
       0 0 30px rgba(173, 216, 230, 0.6);
@@ -54,23 +50,23 @@ const StyledWrapper = styled.div`
     animation-duration: calc(30s / var(--i));
     opacity: 1;
   }
-`;
+`
 
 function NightContainer() {
   return (
     <StyledWrapper>
-      <div style={{ "--i": 10, "--j": 2 }} className="blub" />
-      <div style={{ "--i": 12, "--j": 1.8 }} className="blub" />
-      <div style={{ "--i": 16, "--j": 2.2 }} className="blub" />
-      <div style={{ "--i": 9, "--j": 1.5 }} className="blub" />
-      <div style={{ "--i": 7, "--j": 1.7 }} className="blub" />
-      <div style={{ "--i": 18, "--j": 2.5 }} className="blub" />
-      <div style={{ "--i": 20, "--j": 2 }} className="blub" />
-      <div style={{ "--i": 16, "--j": 1.9 }} className="blub" />
-      <div style={{ "--i": 21, "--j": 2.1 }} className="blub" />
-      <div style={{ "--i": 5, "--j": 1.6 }} className="blub" />
+      <div style={{ '--i': 10, '--j': 2 }} className="blub" />
+      <div style={{ '--i': 12, '--j': 1.8 }} className="blub" />
+      <div style={{ '--i': 16, '--j': 2.2 }} className="blub" />
+      <div style={{ '--i': 9, '--j': 1.5 }} className="blub" />
+      <div style={{ '--i': 7, '--j': 1.7 }} className="blub" />
+      <div style={{ '--i': 18, '--j': 2.5 }} className="blub" />
+      <div style={{ '--i': 20, '--j': 2 }} className="blub" />
+      <div style={{ '--i': 16, '--j': 1.9 }} className="blub" />
+      <div style={{ '--i': 21, '--j': 2.1 }} className="blub" />
+      <div style={{ '--i': 5, '--j': 1.6 }} className="blub" />
     </StyledWrapper>
-  );
+  )
 }
 
-export default NightContainer;
+export default NightContainer

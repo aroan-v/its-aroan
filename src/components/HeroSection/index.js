@@ -1,2 +1,2 @@
-export * from "./HeroSection";
-export { default } from "./HeroSection";
+export * from './HeroSection'
+export { default } from './HeroSection'

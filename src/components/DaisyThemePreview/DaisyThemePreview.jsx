@@ -1,11 +1,8 @@
-import React from "react";
+import React from 'react'
 
 function DaisyThemePreview() {
   return (
-    <div
-      id="daisy-scope"
-      className="ds-bg-base-100 text-base-content min-h-screen p-8"
-    >
+    <div id="daisy-scope" className="ds-bg-base-100 text-base-content min-h-screen p-8">
       TEST TESTTESTTESTTESTTEST
       <button className="ds-btn ds-btn-neutral">Neutral</button>
       <button className="ds-btn ds-btn-primary">Primary</button>
@@ -16,7 +13,7 @@ function DaisyThemePreview() {
       <button className="ds-btn ds-btn-warning">Warning</button>
       <button className="ds-btn ds-btn-error">Error</button>
     </div>
-  );
+  )
 }
 
-export default DaisyThemePreview;
+export default DaisyThemePreview

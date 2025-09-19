@@ -1,28 +1,28 @@
-"use client";
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+'use client'
+import React from 'react'
+import { Button } from '@/components/ui/button'
+import { Menu, X } from 'lucide-react'
 
 const NavBar = () => {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
 
   const navItems = [
-    { href: "#home", label: "Home" },
-    { href: "#projects", label: "Projects" },
-    { href: "#skills", label: "Skills" },
-    { href: "#contact", label: "Contact" },
-  ];
+    { href: '#home', label: 'Home' },
+    { href: '#projects', label: 'Projects' },
+    { href: '#skills', label: 'Skills' },
+    { href: '#contact', label: 'Contact' },
+  ]
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-base-300 backdrop-blur-lg ">
+    <header className="bg-base-300 fixed top-0 z-50 w-full backdrop-blur-lg">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-xl font-bold bg-primary bg-clip-text text-transparent">
+          <div className="bg-primary bg-clip-text text-xl font-bold text-transparent">
             Portfolio
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden items-center space-x-8 md:flex">
             {navItems.map((item) => (
               <a
                 key={item.href}
@@ -47,7 +47,7 @@ const NavBar = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4">
+          <div className="mt-4 pb-4 md:hidden">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <a
@@ -64,7 +64,7 @@ const NavBar = () => {
         )}
       </nav>
     </header>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar

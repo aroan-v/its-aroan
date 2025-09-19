@@ -1,129 +1,117 @@
-import React from "react";
-import { Card } from "../ui/card";
-import { Button } from "../ui/button";
-import { ExternalLink, Github } from "lucide-react";
-import Image from "next/image";
+import React from 'react'
+import { Card } from '../ui/card'
+import { Button } from '../ui/button'
+import { ExternalLink, Github } from 'lucide-react'
+import Image from 'next/image'
+import ProjectCard from '../ProjectCard'
 
 function FeaturedProjectsSection() {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
+      title: 'Vote Dashboard',
       description:
-        "A modern e-commerce platform built with React, TypeScript, and Stripe integration. Features include user authentication, shopping cart, and payment processing.",
-      image: "/projects/project-ecommerce.jpg",
-      technologies: ["React", "TypeScript", "Stripe", "Tailwind CSS"],
-      liveUrl: "#",
-      githubUrl: "#",
+        'A real-time, interactive voting dashboard for fans to track progress, plan strategies, and make the online poll grind more engaging and collaborative.',
+      technologies: [
+        'Next.js',
+        'React',
+        'Tailwind',
+        'Zustand',
+        'D3-Charts',
+        'Shadcn',
+        'cronjob',
+        'Vercel',
+      ],
+      image: ['/projects/vote-dashboard.jpg'],
+      liveUrl: 'https://nylon-boldest-breakout-star-will.vercel.app',
+      githubUrl: 'https://github.com/aroan-v/vote-dashboard',
     },
     {
       id: 2,
-      title: "Task Management App",
+      title: 'AI Macro Calculator',
       description:
-        "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "/projects/project-taskmanager.jpg",
-      technologies: ["Next.js", "Socket.io", "MongoDB", "Framer Motion"],
-      liveUrl: "#",
-      githubUrl: "#",
+        'A smart meal tracker that simplifies logging: just type what you ate and the serving size (defaults to grams), and AI calculates calories and protein accurately. No more rigid presets—just fast, precise tracking with Gemma and Groq.',
+      technologies: [
+        'Next.js',
+        'React',
+        'Groq',
+        'Gemma-2b',
+        'Tailwind',
+        'Vercel',
+        'Shadcn',
+        'DaisyUI',
+      ],
+      image: ['/projects/macro-calculator-1.jpg', '/projects/macro-calculator-2.jpg'],
+      liveUrl: 'https://ai-macro-calculator.vercel.app',
+      githubUrl: 'https://github.com/aroan-v/forge-app',
     },
     {
       id: 3,
-      title: "Social Media Dashboard",
+      title: 'Tic-Tac-Toe Game',
       description:
-        "Analytics dashboard for social media management with data visualization, post scheduling, and performance tracking.",
-      image: "/projects/project-social.jpg",
-      technologies: ["Vue.js", "D3.js", "Node.js", "PostgreSQL"],
-      liveUrl: "#",
-      githubUrl: "#",
+        'This is my take on Tic-Tac-Toe — an interactive game where you can challenge a computer opponent with adjustable difficulty levels. It started as a simple console version and grew into a full DOM-based experience, complete with move analysis, strategic decision-making, and a flexible evaluation system.',
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      image: ['/projects/tic-tac-toe.jpg'],
+      liveUrl: 'https://aroan-v.github.io/Tic-Tac-Toe/',
+      githubUrl: 'https://github.com/aroan-v/Tic-Tac-Toe',
     },
-  ];
+    {
+      id: 4,
+      title: 'Battleships',
+      description:
+        'A block-based Battleships game built with a focus on smart computer and robust game logic. Supports Player vs Computer and Player vs Player modes. Core game logic is fully tested with Jest to ensure accurate hits, sinks, and turn management.',
+      technologies: ['Jest', 'Unit Testing', 'JavaScript', 'HTML', 'CSS'],
+      image: ['/projects/battleships.jpg'],
+      liveUrl: 'https://aroan-v.github.io/Battleship/',
+      githubUrl: 'https://github.com/aroan-v/Battleship',
+    },
+    {
+      id: 5,
+      title: 'Calculator',
+      description:
+        'This repository houses a fully-functional calculator application built with HTML, CSS, and JavaScript.',
+      technologies: ['CSS', 'JavaScript', 'HTML'],
+      image: ['/projects/calculator.jpg'],
+      liveUrl: 'https://aroan-v.github.io/Calculator/',
+      githubUrl: 'https://github.com/aroan-v/Calculator',
+    },
+    {
+      id: 6,
+      title: 'Crumble Cafe Page',
+      description:
+        'A modularized cafe page where objects tell the story and functions bring it to life. Webpack, JavaScript, and CSS unite to serve dynamic content and smooth navigation.',
+      technologies: ['HTML', 'JavaScript', 'CSS'],
+      image: [
+        '/projects/cafe-page-1.jpg',
+        '/projects/cafe-page-2.jpg',
+        '/projects/cafe-page-3.jpg',
+      ],
+      liveUrl: 'https://aroan-v.github.io/Crumble-Cafe-Page/',
+      githubUrl: 'https://github.com/aroan-v/Crumble-Cafe-Page',
+    },
+  ]
 
   return (
-    <section id="projects" className="py-20 bg-background">
+    <section id="projects" className="bg-background py-20">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="bg-gradient-secondary bg-clip-text text-transparent">
-              Featured Projects
-            </span>
+        <div className="mb-16 text-center">
+          <h2 className="mb-4 text-4xl font-bold md:text-5xl">
+            <span className="text-primary">Featured Projects</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A showcase of my recent web development projects, featuring modern
-            technologies and creative solutions.
+          <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
+            A showcase of my recent web development projects, featuring modern technologies and
+            creative solutions.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <Card
-              key={project.id}
-              className="group bg-glass border-glass backdrop-blur-lg hover:shadow-card transition-all duration-500 hover:-translate-y-2 overflow-hidden"
-            >
-              <div className="relative h-48 overflow-hidden">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
-              </div>
-
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-3 text-foreground">
-                  {project.title}
-                </h3>
-                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
-                  {project.description}
-                </p>
-
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full border border-accent/20"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="flex gap-3">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="flex-1 border-glass hover:bg-accent hover:text-accent-foreground transition-all duration-300"
-                  >
-                    <a
-                      href={project.liveUrl}
-                      className="flex items-center gap-2"
-                    >
-                      <ExternalLink size={16} />
-                      Live Demo
-                    </a>
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="flex-1 border-glass hover:bg-glass transition-all duration-300"
-                  >
-                    <a
-                      href={project.githubUrl}
-                      className="flex items-center gap-2"
-                    >
-                      <Github size={16} />
-                      Code
-                    </a>
-                  </Button>
-                </div>
-              </div>
-            </Card>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project, index) => (
+            <ProjectCard key={index} project={project} />
           ))}
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default FeaturedProjectsSection;
+export default FeaturedProjectsSection

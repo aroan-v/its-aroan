@@ -1,2 +1,2 @@
-export * from "./DaisyThemePreview";
-export { default } from "./DaisyThemePreview";
+export * from './DaisyThemePreview'
+export { default } from './DaisyThemePreview'
