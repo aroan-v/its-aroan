@@ -11,7 +11,7 @@ function Card({ className, ...props }) {
         'bg-card text-card-foreground',
 
         // Layout
-        'group flex flex-col gap-6 overflow-hidden',
+        'group flex flex-col overflow-hidden',
 
         // Border & radius
         'rounded-xl',

@@ -58,14 +58,14 @@ function AboutMeSection() {
 
         <div className="px-4 lg:px-0">
           <div className="mb-12">
-            <h2 className="mb-6 text-4xl font-bold md:text-5xl">
-              <span className="text-primary">About Me</span>
+            <h2 className="text-primary mb-6 text-center text-4xl font-bold md:text-5xl lg:text-left">
+              About Me
             </h2>
 
             <p className="text-muted-foreground mb-6 text-sm">
-              I’m Josh, an aspiring web developer who enjoys turning ideas into interactive
-              projects. I like breaking down problems, experimenting with solutions, and refining
-              details until they click.
+              I’m Josh (also known as Aroan), an aspiring web developer who enjoys turning ideas
+              into interactive projects. I like breaking down problems, experimenting with
+              solutions, and refining details until they click.
             </p>
 
             <p className="text-muted-foreground mb-6 text-sm">

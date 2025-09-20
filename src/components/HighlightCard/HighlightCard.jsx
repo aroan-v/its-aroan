@@ -1,13 +1,17 @@
 import React from 'react'
-import { Card } from '../ui/card'
+import { Card, CardContent } from '../ui/card'
 import { Button } from '../ui/button'
 import { ExternalLink, Github } from 'lucide-react'
 import Image from 'next/image'
 
-function ProjectCard({ project }) {
+function HighlightCard({ project }) {
   return (
-    <Card key={project.id} className="border-base-300 flex-col border-3 pb-6">
-      <div className="relative h-80 overflow-hidden">
+    <Card
+      key={project.id}
+      className="group border-base-300 overflow-hidden border-3 lg:flex lg:flex-row"
+    >
+      {/* Image */}
+      <div className="relative h-60 w-full flex-shrink-0 lg:h-auto lg:w-80">
         <Image
           src={project.image[0]}
           alt={project.title}
@@ -18,21 +22,27 @@ function ProjectCard({ project }) {
         <div className="bg-gradient-primary absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-20" />
       </div>
 
-      <div className="p-6">
-        <h3 className="text-foreground mb-3 text-xl font-semibold">{project.title}</h3>
-        <p className="text-muted-foreground mb-4 text-sm leading-relaxed">{project.description}</p>
+      {/* Content */}
+      <CardContent className="flex flex-1 flex-col justify-between p-6">
+        <div>
+          <h3 className="text-foreground mb-3 text-xl font-semibold">{project.title}</h3>
+          <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+            {project.description}
+          </p>
 
-        <div className="mb-6 flex flex-wrap gap-2">
-          {project.technologies.map((tech) => (
-            <span
-              key={tech}
-              className="bg-accent/10 text-accent border-accent/20 rounded-full border px-3 py-1 text-xs"
-            >
-              {tech}
-            </span>
-          ))}
+          <div className="mb-6 flex flex-wrap gap-2">
+            {project.technologies.map((tech) => (
+              <span
+                key={tech}
+                className="border-accent/20 bg-accent/10 text-accent rounded-full border px-3 py-1 text-xs"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
         </div>
 
+        {/* Buttons */}
         <div className="flex gap-3">
           <Button
             variant="outline"
@@ -55,9 +65,9 @@ function ProjectCard({ project }) {
             </a>
           </Button>
         </div>
-      </div>
+      </CardContent>
     </Card>
   )
 }
 
-export default ProjectCard
+export default HighlightCard

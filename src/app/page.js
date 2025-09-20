@@ -10,7 +10,6 @@ export default function Home() {
   return (
     <div>
       <NavBar />
-
       <HeroSection />
       <FeaturedProjectsSection />
       <AboutMeSection />
