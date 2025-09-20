@@ -1,72 +1,126 @@
 import React from 'react'
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
 import DaisyWrapper from '../DaisyWrapper'
+import SkillsSection from '../SkillsSection'
+import PaddingWrapper from '../PaddingWrapper'
+import Highlight from '../Highlight'
+import Image from 'next/image'
+
+const stats = [
+  {
+    label: 'Frontend Development',
+    className: 'ds-badge-accent',
+    items: ['HTML / CSS', 'JavaScript', 'Tailwind CSS', 'shadcn/ui', 'DaisyUI'],
+    softStyle: ['React', 'Next.js'],
+  },
+  {
+    label: 'UI / UX Design',
+    className: 'ds-badge-secondary',
+    items: ['Adobe Creative Suite'],
+    softStyle: ['Figma', 'Photoshop'],
+  },
+  {
+    label: 'Other Tools',
+    className: 'ds-badge-primary',
+    items: ['Git', 'Firebase', 'NPM', 'Sanity Studio'],
+  },
+]
 
 function AboutMeSection() {
-  const stats = [
-    {
-      label: 'Web Programming',
-      items: [
-        'JavaScript',
-        'TypeScript',
-        'React',
-        'Next.js',
-        'Tailwind CSS',
-        'shadcn/ui',
-        'DaisyUI',
-      ],
-    },
-    {
-      label: 'Design Tools',
-      items: ['Figma'],
-    },
-    {
-      label: 'Other Tools',
-      items: ['Git', 'Firebase', 'Stripe'],
-    },
-  ]
-
   return (
-    <section id="about" className="bg-background py-20">
-      <div className="container mx-auto max-w-4xl px-4">
-        {/* Intro */}
-        <div className="mb-12 text-center">
-          <h2 className="mb-6 text-4xl font-bold md:text-5xl">
-            <span className="bg-gradient-secondary bg-clip-text text-transparent">About Me</span>
-          </h2>
-          <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
-            I’m Josh, a developer who thrives on turning ideas into polished, interactive apps. I
-            enjoy breaking down problems, experimenting with solutions, and refining details until
-            they click. My projects often explore modern frameworks like{' '}
-            <span className="text-foreground font-medium">React</span> and{' '}
-            <span className="text-foreground font-medium">Next.js</span>, paired with tools like
-            Tailwind CSS and TypeScript to bring designs and logic together seamlessly.
-          </p>
-          <p className="text-muted-foreground text-lg leading-relaxed">
-            My focus is on staying solid with fundamentals while exploring new tech, whether it’s
-            building e-commerce platforms, task managers, or dashboards. I’m always looking for ways
-            to create useful, engaging, and scalable applications.
-          </p>
+    <PaddingWrapper as="section" id="about" className="mx-auto max-w-5xl">
+      <div className="grid items-start gap-12 lg:grid-cols-2">
+        <div className="my-auto space-y-8">
+          <ProfilePhoto />
+          <DaisyWrapper>
+            <div className="gap-8 space-y-4 text-center">
+              {stats.map((group, idx) => (
+                <div key={idx}>
+                  <h3 className="text-foreground mb-1 text-lg font-semibold">{group.label}</h3>
+                  <div className="mx-auto flex max-w-md flex-wrap justify-center gap-2">
+                    {group.softStyle?.map((item) => (
+                      <div key={item} className={`ds-badge ${group.className}`}>
+                        {item}
+                      </div>
+                    ))}
+
+                    {group.items.map((item) => (
+                      <div key={item} className={`ds-badge ds-badge-dash ${group.className}`}>
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </DaisyWrapper>
+        </div>
+
+        <div className="px-4 lg:px-0">
+          <div className="mb-12">
+            <h2 className="mb-6 text-4xl font-bold md:text-5xl">
+              <span className="text-primary">About Me</span>
+            </h2>
+
+            <p className="text-muted-foreground mb-6 text-sm">
+              I’m Josh, an aspiring web developer who enjoys turning ideas into interactive
+              projects. I like breaking down problems, experimenting with solutions, and refining
+              details until they click.
+            </p>
+
+            <p className="text-muted-foreground mb-6 text-sm">
+              I graduated from <Highlight className="text-accent">Mapúa University</Highlight> with
+              a{' '}
+              <Highlight className="text-primary">
+                BS degree in Multimedia Arts and Sciences
+              </Highlight>
+              . My first role was with <Highlight>Impact Hub Manila</Highlight>, where I eventually
+              became the creatives manager. I handled branding, social media, publication materials,
+              and website design through Figma. While design sharpened my creative eye, I eventually
+              realized my true passion wasn’t in digital arts—it was in building, problem-solving,
+              and crafting solutions through development.
+            </p>
+
+            <p className="text-muted-foreground mb-6 text-sm">
+              Two years ago, I began self-studying web development. I started with{' '}
+              <Highlight>HTML, CSS, and JavaScript</Highlight>, making sure I had a strong
+              foundation before moving into frameworks like <Highlight>React</Highlight> and{' '}
+              <Highlight>Next.js</Highlight>.
+            </p>
+
+            <p className="text-muted-foreground text-sm">
+              Today, I’m working toward becoming a{' '}
+              <Highlight className="text-secondary">full-stack developer</Highlight> and eventually
+              a software engineer. As I start applying for junior developer roles, I look forward to
+              growing further, learning from real-world challenges, and continuing to push my skills
+              forward one project at a time.
+            </p>
+          </div>
         </div>
       </div>
-      <DaisyWrapper>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-          {stats.map((group, idx) => (
-            <div key={idx}>
-              <h3 className="text-foreground mb-3 text-lg font-semibold">{group.label}</h3>
-              <div className="flex flex-wrap gap-2">
-                {group.items.map((item) => (
-                  <div key={item} className="ds-badge ds-badge-dash ds-badge-primary">
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>{' '}
-      </DaisyWrapper>
-    </section>
+    </PaddingWrapper>
   )
 }
 
 export default AboutMeSection
+
+function ProfilePhoto() {
+  return (
+    <div className="flex w-full items-center justify-center">
+      <div className="group relative h-40 w-40">
+        <div className="from-primary via-secondary to-primary relative h-full w-full rounded-3xl bg-gradient-to-br p-1 shadow-lg">
+          <div className="bg-background relative h-full w-full overflow-hidden rounded-3xl">
+            <Image
+              src="/profile.jpg"
+              alt="Josh's picture"
+              fill
+              className="rounded-3xl object-cover transition-transform duration-500 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              priority
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
