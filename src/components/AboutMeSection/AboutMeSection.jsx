@@ -11,7 +11,7 @@ const stats = [
     label: 'Frontend Development',
     className: 'ds-badge-accent',
     items: ['HTML / CSS', 'JavaScript', 'Tailwind CSS', 'shadcn/ui', 'DaisyUI'],
-    softStyle: ['React', 'Next.js'],
+    softStyle: ['React', 'Next.js', 'Vercel'],
   },
   {
     label: 'UI / UX Design',
@@ -83,9 +83,10 @@ function AboutMeSection() {
 
             <p className="text-muted-foreground mb-6 text-sm">
               Two years ago, I began self-studying web development. I started with{' '}
-              <Highlight>HTML, CSS, and JavaScript</Highlight>, making sure I had a strong
-              foundation before moving into frameworks like <Highlight>React</Highlight> and{' '}
-              <Highlight>Next.js</Highlight>.
+              <Highlight className="text-primary">HTML, CSS, and JavaScript</Highlight>, making sure
+              I had a strong foundation before moving into frameworks like{' '}
+              <Highlight className="text-accent">React</Highlight> and{' '}
+              <Highlight className="text-accent">Next.js</Highlight>.
             </p>
 
             <p className="text-muted-foreground text-sm">
