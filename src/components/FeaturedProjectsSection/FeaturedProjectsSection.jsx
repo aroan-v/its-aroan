@@ -115,6 +115,12 @@ const projects = [
       'This is my take on Tic-Tac-Toe — an interactive game where you can challenge a computer opponent with adjustable difficulty levels. It started as a simple console version and grew into a full DOM-based experience, complete with move analysis, strategic decision-making, and a flexible evaluation system.',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     image: ['/projects/tic-tac-toe.jpg'],
+    badges: [
+      {
+        className: 'ds-badge-outline  ds-badge-secondary',
+        items: ['HTML', 'CSS', 'Javascript'],
+      },
+    ],
     liveUrl: 'https://aroan-v.github.io/Tic-Tac-Toe/',
     githubUrl: 'https://github.com/aroan-v/Tic-Tac-Toe',
   },
@@ -123,7 +129,16 @@ const projects = [
     title: 'Battleships',
     description:
       'A block-based Battleships game built with a focus on smart computer and robust game logic. Supports Player vs Computer and Player vs Player modes. Core game logic is fully tested with Jest to ensure accurate hits, sinks, and turn management.',
-    technologies: ['HTML', 'CSS', 'Javascript ES6', 'Jest', 'Unit Testing'],
+    badges: [
+      {
+        className: 'ds-badge-outline  ds-badge-secondary',
+        items: ['HTML', 'CSS', 'Javascript'],
+      },
+      {
+        className: 'ds-badge-outline  ds-badge-foreground',
+        items: ['Jest', 'Unit Testing'],
+      },
+    ],
     image: ['/projects/battleships.jpg'],
     liveUrl: 'https://aroan-v.github.io/Battleship/',
     githubUrl: 'https://github.com/aroan-v/Battleship',
@@ -134,6 +149,12 @@ const projects = [
     description:
       'This repository houses a fully-functional calculator application built with HTML, CSS, and JavaScript.',
     technologies: ['HTML', 'CSS', 'Javascript ES6'],
+    badges: [
+      {
+        className: 'ds-badge-outline  ds-badge-secondary',
+        items: ['HTML', 'CSS', 'Javascript'],
+      },
+    ],
     image: ['/projects/calculator.jpg'],
     liveUrl: 'https://aroan-v.github.io/Calculator/',
     githubUrl: 'https://github.com/aroan-v/Calculator',
@@ -144,6 +165,12 @@ const projects = [
     description:
       'A modularized cafe page where objects tell the story and functions bring it to life. Webpack, JavaScript, and CSS unite to serve dynamic content and smooth navigation.',
     technologies: ['HTML', 'CSS', 'Javascript ES6'],
+    badges: [
+      {
+        className: 'ds-badge-outline  ds-badge-secondary',
+        items: ['HTML', 'CSS', 'Javascript'],
+      },
+    ],
     image: ['/projects/cafe-page-1.jpg', '/projects/cafe-page-2.jpg', '/projects/cafe-page-3.jpg'],
     liveUrl: 'https://aroan-v.github.io/Crumble-Cafe-Page/',
     githubUrl: 'https://github.com/aroan-v/Crumble-Cafe-Page',

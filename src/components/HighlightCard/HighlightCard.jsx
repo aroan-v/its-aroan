@@ -48,37 +48,35 @@ function HighlightCard({ project, index }) {
 
       {/* Content */}
       <CardContent className="flex flex-1 flex-col justify-between p-6 lg:p-12">
-        <div>
-          <CardTitle className="text-primary mb-3 flex items-end text-xl font-semibold">
-            {project.logoSrc && (
-              <Image
-                src={project.logoSrc}
-                alt={project.alt}
-                width={35}
-                height={35}
-                className="mr-3 rounded-md"
-              />
-            )}
+        <CardTitle className="text-primary mb-3 flex items-end text-xl font-semibold">
+          {project.logoSrc && (
+            <Image
+              src={project.logoSrc}
+              alt={project.alt}
+              width={35}
+              height={35}
+              className="mr-3 rounded-md"
+            />
+          )}
 
-            {project.title}
-          </CardTitle>
+          {project.title}
+        </CardTitle>
 
-          {project.description?.map((paragraph, index) => (
-            <p className="text-muted-foreground mb-4 text-sm leading-relaxed" key={index}>
-              {paragraph}
-            </p>
-          ))}
+        {project.description?.map((paragraph, index) => (
+          <p className="text-muted-foreground mb-4 text-sm leading-relaxed" key={index}>
+            {paragraph}
+          </p>
+        ))}
 
-          <DaisyWrapper className="mb-6 flex flex-wrap gap-2">
-            {project?.badges?.map((badge, index) =>
-              badge?.items?.map((item, i) => (
-                <div key={`${index}-${i}`} className={`ds-badge ${badge.className}`}>
-                  {item}
-                </div>
-              ))
-            )}
-          </DaisyWrapper>
-        </div>
+        <DaisyWrapper className="mb-6 flex flex-wrap gap-2">
+          {project?.badges?.map((badge, index) =>
+            badge?.items?.map((item, i) => (
+              <div key={`${index}-${i}`} className={`ds-badge ${badge.className}`}>
+                {item}
+              </div>
+            ))
+          )}
+        </DaisyWrapper>
 
         {/* Buttons */}
         <CardAction>
