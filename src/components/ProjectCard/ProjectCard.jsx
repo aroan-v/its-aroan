@@ -12,7 +12,7 @@ function ProjectCard({ project }) {
       <div className="shadow-neutral relative h-80 overflow-hidden shadow-inner">
         <Image
           src={project.image[0]}
-          alt={project.title}
+          alt={project.images[0].alt}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -24,6 +24,7 @@ function ProjectCard({ project }) {
         <p className="text-muted-foreground mb-4 text-sm leading-relaxed">{project.description}</p>
 
         {/* Badges */}
+
         <DaisyWrapper className="mb-6 flex flex-wrap gap-2">
           {project?.badges?.map((badge, index) =>
             badge?.items?.map((item, i) => (
@@ -37,13 +38,23 @@ function ProjectCard({ project }) {
         {/* Buttons */}
         <CardAction>
           <Button asChild variant="defaultOutline" size="sm">
-            <a href={project.liveUrl} className="flex items-center gap-2">
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2"
+            >
               <ExternalLink size={16} />
               Live Demo
             </a>
           </Button>
           <Button asChild variant="defaultOutline" size="sm">
-            <a href={project.githubUrl} className="flex items-center gap-2">
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2"
+            >
               <Github size={16} />
               Code
             </a>

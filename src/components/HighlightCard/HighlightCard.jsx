@@ -21,7 +21,7 @@ function HighlightCard({ project, index }) {
         {project.images?.desktop && (
           <Image
             src={project.images?.desktop}
-            alt={project.alt}
+            alt={project.altImages.desktop}
             fill
             className="hidden rounded-xl object-contain transition-transform duration-500 group-hover:scale-105 lg:block"
             sizes="(min-width: 1024px) 320px"
@@ -35,7 +35,7 @@ function HighlightCard({ project, index }) {
               {project.images?.mobile && (
                 <Image
                   src={project.images.mobile}
-                  alt={project.alt}
+                  alt={project.altImages.mobile}
                   fill
                   className="rounded-xl object-contain object-bottom transition-transform duration-500 group-hover:scale-105 lg:hidden"
                   sizes="(max-width: 768px) 579px"
@@ -81,13 +81,23 @@ function HighlightCard({ project, index }) {
         {/* Buttons */}
         <CardAction>
           <Button asChild variant="defaultOutline" size="sm">
-            <a href={project.liveUrl} className="flex items-center gap-2">
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2"
+            >
               <ExternalLink size={16} />
               Live Demo
             </a>
           </Button>
           <Button asChild variant="defaultOutline" size="sm">
-            <a href={project.githubUrl} className="flex items-center gap-2">
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2"
+            >
               <Github size={16} />
               Code
             </a>

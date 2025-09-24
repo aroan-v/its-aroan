@@ -17,9 +17,9 @@ const highlightProjects = [
       "To make the voting more interesting, and to bring out the fandom's competitive side, I created an interactive vote tracker. It was a visual tool designed to reimagine the typically boring, straightforward poll result. Inspired by the dynamic and engaging vote displays of MTV EMAs and MTV Hottest, I built a system that showcased the results with a unique visual flair.",
       <>
         {'Using '}
-        <Highlight className="text-secondary font-bold">cron-job.org</Highlight>
+        <Highlight className="text-accent font-bold">cron-job.org</Highlight>
         {' and '}
-        <Highlight className="text-secondary font-bold">GitHub Actions</Highlight>
+        <Highlight className="text-accent font-bold">GitHub Actions</Highlight>
         {
           ', I took a snapshot of the vote standings every five minutes, from August 19 to September 1. This real-time data fed directly into the dashboard, allowing us to see our progress in an exciting new way.'
         }
@@ -46,6 +46,10 @@ const highlightProjects = [
       desktop: '/projects/dashboard-desktop.png',
       mobile: '/projects/dashboard-mobile.png',
     },
+    altImages: {
+      desktop: 'Ipad mockup of the Vote Dashboard page.',
+      mobile: 'Macbook and iphone mockup of the Vote Dashboard page.',
+    },
     liveUrl: 'https://nylon-boldest-breakout-star-will.vercel.app',
     githubUrl: 'https://github.com/aroan-v/vote-dashboard',
   },
@@ -58,9 +62,9 @@ const highlightProjects = [
       'Tracking meals can feel overwhelming, especially when standard macro trackers force users to pick from limited serving options or predefined ingredients. It’s easy to get lost in all the details and feel restricted by the app. That’s why a simpler and more accessible solution was needed.',
       <>
         {'With the power of AI—using'}
-        <Highlight className="text-secondary font-bold"> Gemma</Highlight>
+        <Highlight className="text-accent font-bold"> Gemma</Highlight>
         {' (by Google and Gemini) and '}
-        <Highlight className="text-secondary font-bold">Groq</Highlight>
+        <Highlight className="text-accent font-bold">Groq</Highlight>
         {
           ' as the API provider—users can now just type a detailed description of what they ate. This freedom of description is the core of its accuracy. Unlike standard trackers that limit to predefined ingredients or generic meals, the AI understands the nuances of an input, such as specifying '
         }
@@ -102,8 +106,93 @@ const highlightProjects = [
       desktop: '/projects/calculator-desktop.png',
       mobile: '/projects/calculator-mobile.png',
     },
+    altImages: {
+      desktop: 'Ipad mockup of AI Macro Calculator project.',
+      mobile: 'Ipad mockup of AI Macro Calculator project.',
+    },
     liveUrl: 'https://ai-macro-calculator.vercel.app',
     githubUrl: 'https://github.com/aroan-v/forge-app',
+  },
+  {
+    id: 3,
+    title: 'Nylon Vote Page',
+    logoSrc: '/project-logos/vote-page.jpg',
+    alt: 'Logo for Nylon Vote Page project',
+    description: [
+      <>
+        {
+          'This project started during a fandom vote competition where our team was falling behind. The gap was widening, and to make things worse, participation from our fandom was low. The few of us who were still voting felt like our efforts weren’t moving the needle. That’s when I began thinking: how can I make voting easier and more motivating for the ones still in the fight?'
+        }
+      </>,
+      <>
+        {'My first idea was '}
+        <Highlight className="text-accent font-bold">efficiency</Highlight>
+        {
+          '. I dug into the host poll’s script, rooted it out, and re-injected it into my own page. Then I made five iframe copies of it, so voters could cast multiple votes faster across different browsers and devices. To prevent issues, I also figured out what triggered the '
+        }
+        <span className="italic">rate limits</span>
+        {' and added instructions so voters could avoid getting blocked.'}
+      </>,
+      <>
+        {'The second idea was '}
+        <Highlight className="text-accent font-bold">morale</Highlight>
+        {
+          '. I built a votes sent tracker that counted every successful vote through the server’s response and stored the number in local storage. This way, each voter could see their personal total across sessions — a number they could proudly share with the group.'
+        }
+      </>,
+      <>
+        {
+          'I also added a live gap counter that refreshed every 3 seconds, plus a redesigned results page that was far more engaging than the dull original.'
+        }
+      </>,
+      <>
+        {'In the end, the project hit its two goals: it '}
+        <Highlight className="text-accent font-bold">empowered voters</Highlight>
+        {' by giving them a clear count of their contributions, and it '}
+        <Highlight className="text-accent font-bold">made voting less boring</Highlight>
+        {' by turning it into a more interactive and motivating experience.'}
+      </>,
+      <>
+        {
+          'We didn’t win the competition — we finished in second place — but morale was high. Voters could finally see and celebrate how much they had contributed, and that made the whole experience worth it.'
+        }
+      </>,
+    ],
+
+    technologies: [
+      'Next.js',
+      'React',
+      'Vercel',
+      'Groq',
+      'Gemma-2b',
+      'Tailwind CSS',
+      'Shadcn/UI',
+      'DaisyUI',
+    ],
+    badges: [
+      {
+        className: 'ds-badge-outline  ds-badge-accent',
+        items: ['Next.js'],
+      },
+      {
+        className: 'ds-badge-outline  ds-badge-secondary',
+        items: ['Tailwind CSS'],
+      },
+      {
+        className: 'ds-badge-outline  ds-badge-foreground',
+        items: ['Vercel', 'Shadcn/UI'],
+      },
+    ],
+    images: {
+      desktop: '/projects/vote-page-desktop.png',
+      mobile: '/projects/vote-page-mobile.png',
+    },
+    altImages: {
+      desktop: 'Mac mockup of the Vote Page project.',
+      mobile: 'Android phone mockup of the Vote Page project.',
+    },
+    liveUrl: 'https://project-p5lze.vercel.app',
+    githubUrl: 'https://github.com/aroan-v/nylon-vote-page',
   },
 ]
 
@@ -115,6 +204,12 @@ const projects = [
       'This is my take on Tic-Tac-Toe — an interactive game where you can challenge a computer opponent with adjustable difficulty levels. It started as a simple console version and grew into a full DOM-based experience, complete with move analysis, strategic decision-making, and a flexible evaluation system.',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     image: ['/projects/tic-tac-toe.jpg'],
+    images: [
+      {
+        src: '/projects/tic-tac-toe.jpg',
+        alt: 'Screenshot of Tic Tac Toe game interface',
+      },
+    ],
     badges: [
       {
         className: 'ds-badge-outline  ds-badge-secondary',
@@ -140,6 +235,12 @@ const projects = [
       },
     ],
     image: ['/projects/battleships.jpg'],
+    images: [
+      {
+        src: '/projects/battleships.jpg',
+        alt: 'Screenshot of Battleships game interface',
+      },
+    ],
     liveUrl: 'https://aroan-v.github.io/Battleship/',
     githubUrl: 'https://github.com/aroan-v/Battleship',
   },
@@ -156,24 +257,14 @@ const projects = [
       },
     ],
     image: ['/projects/calculator.jpg'],
-    liveUrl: 'https://aroan-v.github.io/Calculator/',
-    githubUrl: 'https://github.com/aroan-v/Calculator',
-  },
-  {
-    id: 6,
-    title: 'Crumble Cafe Page',
-    description:
-      'A modularized cafe page where objects tell the story and functions bring it to life. Webpack, JavaScript, and CSS unite to serve dynamic content and smooth navigation.',
-    technologies: ['HTML', 'CSS', 'Javascript ES6'],
-    badges: [
+    images: [
       {
-        className: 'ds-badge-outline  ds-badge-secondary',
-        items: ['HTML', 'CSS', 'Javascript'],
+        src: '/projects/calculator.jpg',
+        alt: 'Screenshot of Calculator app interface',
       },
     ],
-    image: ['/projects/cafe-page-1.jpg', '/projects/cafe-page-2.jpg', '/projects/cafe-page-3.jpg'],
-    liveUrl: 'https://aroan-v.github.io/Crumble-Cafe-Page/',
-    githubUrl: 'https://github.com/aroan-v/Crumble-Cafe-Page',
+    liveUrl: 'https://aroan-v.github.io/Calculator/',
+    githubUrl: 'https://github.com/aroan-v/Calculator',
   },
 ]
 
