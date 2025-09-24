@@ -7,7 +7,7 @@ import DaisyWrapper from '../DaisyWrapper'
 
 function ProjectCard({ project }) {
   return (
-    <Card key={project.id} className="border-base-300 flex-col border-3 pb-6">
+    <Card key={project.id} className="bg-base-200/30 border-base-300 flex-col pb-6">
       {/* Image container */}
       <div className="shadow-neutral relative h-80 overflow-hidden shadow-inner">
         <Image
@@ -37,7 +37,7 @@ function ProjectCard({ project }) {
 
         {/* Buttons */}
         <CardAction>
-          <Button asChild variant="defaultOutline" size="sm">
+          <Button asChild variant="default" size="sm">
             <a
               href={project.liveUrl}
               target="_blank"
@@ -48,7 +48,7 @@ function ProjectCard({ project }) {
               Live Demo
             </a>
           </Button>
-          <Button asChild variant="defaultOutline" size="sm">
+          <Button asChild variant="default" size="sm">
             <a
               href={project.githubUrl}
               target="_blank"

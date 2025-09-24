@@ -80,7 +80,7 @@ function HighlightCard({ project, index }) {
 
         {/* Buttons */}
         <CardAction>
-          <Button asChild variant="defaultOutline" size="sm">
+          <Button asChild variant="default" size="sm">
             <a
               href={project.liveUrl}
               target="_blank"
@@ -91,7 +91,7 @@ function HighlightCard({ project, index }) {
               Live Demo
             </a>
           </Button>
-          <Button asChild variant="defaultOutline" size="sm">
+          <Button asChild variant="default" size="sm">
             <a
               href={project.githubUrl}
               target="_blank"

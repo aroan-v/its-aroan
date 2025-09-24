@@ -74,11 +74,11 @@ function AboutMeSection() {
               <Highlight className="text-primary">
                 BS degree in Multimedia Arts and Sciences
               </Highlight>
-              . My first role was with <Highlight>Impact Hub Manila</Highlight>, where I eventually
-              became the creatives manager. I handled branding, social media, publication materials,
-              and website design through Figma. While design sharpened my creative eye, I eventually
-              realized my true passion wasn’t in digital arts—it was in building, problem-solving,
-              and crafting solutions through development.
+              . I started as a Visual Communicator and eventually became the Creatives Manager. I
+              handled branding, social media, publication materials, and website design through
+              Figma. While design sharpened my creative eye, I eventually realized my true passion
+              wasn’t in digital arts—it was in building, problem-solving, and crafting solutions
+              through development.
             </p>
 
             <p className="text-muted-foreground mb-6 text-sm">
@@ -91,8 +91,8 @@ function AboutMeSection() {
 
             <p className="text-muted-foreground text-sm">
               Today, I’m working toward becoming a{' '}
-              <Highlight className="text-secondary">full-stack developer</Highlight> and eventually
-              a software engineer. As I start applying for junior developer roles, I look forward to
+              <Highlight className="text-accent">full-stack developer</Highlight> and eventually a
+              software engineer. As I start applying for junior developer roles, I look forward to
               growing further, learning from real-world challenges, and continuing to push my skills
               forward one project at a time.
             </p>
