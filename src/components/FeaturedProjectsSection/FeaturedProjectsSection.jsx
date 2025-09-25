@@ -6,6 +6,8 @@ import Image from 'next/image'
 import ProjectCard from '../ProjectCard'
 import HighlightCard from '../HighlightCard'
 import Highlight from '../Highlight'
+import StyledSunsetBackground from '../StyledSunsetBackground'
+
 const highlightProjects = [
   {
     id: 1,
@@ -270,7 +272,7 @@ const projects = [
 
 function FeaturedProjectsSection() {
   return (
-    <section id="projects" className="bg-background container mx-auto space-y-8 px-4 py-20">
+    <section id="projects" className="relative container mx-auto mt-20 space-y-8 px-4 py-20">
       <div className="mb-16 text-center">
         <h2 className="mb-4 text-4xl font-bold md:text-5xl">
           <span className="text-primary">Featured Projects</span>
@@ -292,6 +294,7 @@ function FeaturedProjectsSection() {
           <ProjectCard key={index} project={project} />
         ))}
       </div>
+      <StyledSunsetBackground />
     </section>
   )
 }

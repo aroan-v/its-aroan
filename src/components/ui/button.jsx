@@ -11,6 +11,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: 'bg-muted/80 text-muted-foreground shadow-xs hover:bg-muted',
+        white: 'bg-white',
         accent: 'bg-accent/80 text-accent-foreground shadow-xs hover:bg-accent',
 
         destructive: cn(

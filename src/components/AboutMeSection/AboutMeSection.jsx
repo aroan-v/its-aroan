@@ -17,12 +17,12 @@ const stats = [
     label: 'UI / UX Design',
     className: 'ds-badge-secondary',
     items: ['Adobe Creative Suite'],
-    softStyle: ['Figma', 'Photoshop'],
+    softStyle: ['Figma', 'Photoshop', 'Illustrator'],
   },
   {
     label: 'Other Tools',
     className: 'ds-badge-primary',
-    items: ['Git', 'Firebase', 'NPM', 'Sanity Studio'],
+    items: ['Github', 'Firebase', 'NPM', 'Sanity Studio'],
   },
 ]
 
