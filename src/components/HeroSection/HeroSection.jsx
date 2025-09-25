@@ -12,7 +12,7 @@ export const HeroBackground = styled.div`
   width: 95%;
   left: 50%;
   transform: translateX(-50%);
-  height: 100%;
+  height: 95%;
 
   /* Background gradient with smooth blending */
   background: radial-gradient(
@@ -47,7 +47,7 @@ function HeroSection() {
       </div>
 
       {/* Description */}
-      <p className="text-foreground w-[80%] max-w-3xl text-center text-lg leading-tight">
+      <p className="text-foreground w-[80%] max-w-3xl text-center text-lg leading-tight text-shadow-sm">
         Turning ideas into projects through logical problem-solving, creative experimentation, and
         attention to detail. Builds on strong fundamentals to create modern, interactive
         applications.

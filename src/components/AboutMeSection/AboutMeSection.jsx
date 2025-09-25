@@ -63,7 +63,7 @@ function AboutMeSection() {
 
         {/* Description */}
         <div className="px-4 lg:px-0">
-          <h2 className="text-primary mb-6 text-center text-4xl font-bold md:text-5xl lg:text-left">
+          <h2 className="text-primary font-display mb-6 text-center text-5xl font-bold md:text-6xl lg:text-left">
             About Me
           </h2>
 

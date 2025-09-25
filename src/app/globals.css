@@ -94,6 +94,9 @@
   --color-ring: var(--color-info);
 
   --color-glass: var(--glass-background);
+
+  --font-sans: var(--font-poppins, ui-sans-serif, system-ui, sans-serif);
+  --font-display: var(--font-yellowtail, ui-sans-serif, system-ui);
 }
 
 :root {
