@@ -4,10 +4,14 @@ import { Button } from '../ui/button'
 import { ExternalLink, Github } from 'lucide-react'
 import Image from 'next/image'
 import DaisyWrapper from '../DaisyWrapper'
+import RedGlassBackground from '../RedGlassBackground'
 
 function ProjectCard({ project }) {
   return (
-    <Card key={project.id} className="bg-base-200/30 border-base-300 flex-col pb-6">
+    <Card
+      key={project.id}
+      className="shadow-secondary relative flex-col rounded-xl bg-transparent pb-6 shadow-sm hover:shadow-lg"
+    >
       {/* Image container */}
       <div className="shadow-neutral relative h-80 overflow-hidden shadow-inner">
         <Image
@@ -37,7 +41,7 @@ function ProjectCard({ project }) {
 
         {/* Buttons */}
         <CardAction>
-          <Button asChild variant="default" size="sm">
+          <Button asChild variant="gradient" size="sm">
             <a
               href={project.liveUrl}
               target="_blank"
@@ -48,7 +52,7 @@ function ProjectCard({ project }) {
               Live Demo
             </a>
           </Button>
-          <Button asChild variant="default" size="sm">
+          <Button asChild variant="gradient" size="sm">
             <a
               href={project.githubUrl}
               target="_blank"
@@ -61,6 +65,9 @@ function ProjectCard({ project }) {
           </Button>
         </CardAction>
       </CardContent>
+
+      {/* Backdrop */}
+      <RedGlassBackground />
     </Card>
   )
 }

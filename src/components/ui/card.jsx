@@ -20,7 +20,7 @@ function Card({ className, ...props }) {
         'pb-6',
 
         // Effects
-        'shadow-sm backdrop-blur-lg',
+        'backdrop-blur-lg',
 
         // Transitions & animations
         'transition-all duration-500 hover:-translate-y-2',

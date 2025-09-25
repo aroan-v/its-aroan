@@ -1,4 +1,5 @@
 import AboutMeSection from '@/components/AboutMeSection'
+import ContactMeSection from '@/components/ContactMeSection'
 import DaisyThemePreview from '@/components/DaisyThemePreview'
 import FeaturedProjectsSection from '@/components/FeaturedProjectsSection'
 import HeroSection from '@/components/HeroSection'

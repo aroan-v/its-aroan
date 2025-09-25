@@ -6,6 +6,7 @@ import PaddingWrapper from '../PaddingWrapper'
 import Highlight from '../Highlight'
 import Image from 'next/image'
 import { SunsetBackgroundBottom } from '../StyledSunsetBackground'
+import ContactMeSection from '../ContactMeSection'
 
 const stats = [
   {
@@ -29,7 +30,7 @@ const stats = [
 
 function AboutMeSection() {
   return (
-    <PaddingWrapper as="section" id="about" className="relative w-full pb-10">
+    <PaddingWrapper as="section" id="about" className="relative w-full pb-30">
       <div className="mx-auto grid max-w-5xl items-start gap-12 lg:grid-cols-2">
         <div className="my-auto space-y-8">
           {/* Image */}
@@ -62,48 +63,49 @@ function AboutMeSection() {
 
         {/* Description */}
         <div className="px-4 lg:px-0">
-          <div className="mb-12">
-            <h2 className="text-primary mb-6 text-center text-4xl font-bold md:text-5xl lg:text-left">
-              About Me
-            </h2>
+          <h2 className="text-primary mb-6 text-center text-4xl font-bold md:text-5xl lg:text-left">
+            About Me
+          </h2>
 
-            <p className="text-muted-foreground mb-6 text-sm">
-              I’m Josh (also known as Aroan), an aspiring web developer who enjoys turning ideas
-              into interactive projects. I like breaking down problems, experimenting with
-              solutions, and refining details until they click.
-            </p>
+          <p className="text-muted-foreground mb-6 text-sm">
+            I’m Josh (also known as Aroan), an aspiring web developer who enjoys turning ideas into
+            interactive projects. I like breaking down problems, experimenting with solutions, and
+            refining details until they click.
+          </p>
 
-            <p className="text-muted-foreground mb-6 text-sm">
-              I graduated from <Highlight className="text-accent">Mapúa University</Highlight> with
-              a{' '}
-              <Highlight className="text-primary">
-                BS degree in Multimedia Arts and Sciences
-              </Highlight>
-              . I started as a Visual Communicator and eventually became the Creatives Manager. I
-              handled branding, social media, publication materials, and website design through
-              Figma. While design sharpened my creative eye, I eventually realized my true passion
-              wasn’t in digital arts—it was in building, problem-solving, and crafting solutions
-              through development.
-            </p>
+          <p className="text-muted-foreground mb-6 text-sm">
+            I graduated from <Highlight className="text-accent">Mapúa University</Highlight> with a{' '}
+            <Highlight className="text-primary">
+              BS degree in Multimedia Arts and Sciences
+            </Highlight>
+            . I started as a Visual Communicator and eventually became the Creatives Manager. I
+            handled branding, social media, publication materials, and website design through Figma.
+            While design sharpened my creative eye, I eventually realized my true passion wasn’t in
+            digital arts—it was in building, problem-solving, and crafting solutions through
+            development.
+          </p>
 
-            <p className="text-muted-foreground mb-6 text-sm">
-              Two years ago, I began self-studying web development. I started with{' '}
-              <Highlight className="text-primary">HTML, CSS, and JavaScript</Highlight>, making sure
-              I had a strong foundation before moving into frameworks like{' '}
-              <Highlight className="text-accent">React</Highlight> and{' '}
-              <Highlight className="text-accent">Next.js</Highlight>.
-            </p>
+          <p className="text-muted-foreground mb-6 text-sm">
+            Two years ago, I began self-studying web development. I started with{' '}
+            <Highlight className="text-primary">HTML, CSS, and JavaScript</Highlight>, making sure I
+            had a strong foundation before moving into frameworks like{' '}
+            <Highlight className="text-accent">React</Highlight> and{' '}
+            <Highlight className="text-accent">Next.js</Highlight>.
+          </p>
 
-            <p className="text-muted-foreground text-sm">
-              Today, I’m working toward becoming a{' '}
-              <Highlight className="text-accent">full-stack developer</Highlight> and eventually a
-              software engineer. As I start applying for junior developer roles, I look forward to
-              growing further, learning from real-world challenges, and continuing to push my skills
-              forward one project at a time.
-            </p>
-          </div>
+          <p className="text-muted-foreground text-sm">
+            Today, I’m working toward becoming a{' '}
+            <Highlight className="text-accent">full-stack developer</Highlight> and eventually a
+            software engineer. As I start applying for junior developer roles, I look forward to
+            growing further, learning from real-world challenges, and continuing to push my skills
+            forward one project at a time.
+          </p>
         </div>
       </div>
+
+      {/* Contact */}
+
+      <ContactMeSection />
 
       {/* Background */}
       <SunsetBackgroundBottom />

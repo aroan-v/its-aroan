@@ -56,7 +56,7 @@ export const SunsetBackgroundBottom = styled.div`
   background-position: center top;
 
   pointer-events: none;
-  z-index: -1;
+  z-index: -15;
 `
 
 function StyledSunsetBackground() {

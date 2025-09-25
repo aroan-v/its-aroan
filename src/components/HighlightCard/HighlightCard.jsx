@@ -6,18 +6,20 @@ import Image from 'next/image'
 import DaisyWrapper from '../DaisyWrapper'
 import { devLog } from '@/lib/logger'
 import StyledCardBackground from '../StyledCardBackground'
+import GlassBackground from '../GlassBackground'
+import RedGlassBackground from '../RedGlassBackground'
 
 function HighlightCard({ project, index }) {
   devLog('project', project)
 
-  const cardClasses = `group bg-base-300/20 backdrop-blur-3xl shadow-sm hover:shadow-lg hover:shadow-secondary shadow-inner shadow-neutral overflow-hidden lg:flex ${
+  const cardClasses = `bg-transparent group relative backdrop-blur-3xl shadow-sm hover:shadow-lg shadow-secondary overflow-hidden lg:flex ${
     index % 2 === 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'
   }`
 
   return (
     <Card key={project.id} className={cardClasses}>
       {/* Image */}
-      <div className="bg-neutral/30 relative aspect-video w-full flex-shrink-0 rounded-xl lg:m-10 lg:h-auto lg:w-80 lg:bg-transparent">
+      <div className="relative aspect-video w-full flex-shrink-0 rounded-xl lg:m-10 lg:h-auto lg:w-80 lg:bg-transparent">
         {/* Desktop Image */}
         {project.images?.desktop && (
           <Image
@@ -45,6 +47,8 @@ function HighlightCard({ project, index }) {
             </div>
           </div>
         )}
+
+        <GlassBackground />
       </div>
 
       {/* Content */}
@@ -107,7 +111,7 @@ function HighlightCard({ project, index }) {
       </CardContent>
 
       {/* Backdrop */}
-      {/* <StyledCardBackground /> */}
+      <RedGlassBackground />
     </Card>
   )
 }
