@@ -12,7 +12,7 @@ export const HeroBackground = styled.div`
   width: 95%;
   left: 50%;
   transform: translateX(-50%);
-  height: 600px;
+  height: 100%;
 
   /* Background gradient with smooth blending */
   background: radial-gradient(
@@ -38,42 +38,24 @@ export const HeroBackground = styled.div`
 
 function HeroSection() {
   return (
-    <div className="relative flex h-[600px] w-full flex-col items-center justify-center space-y-4">
+    <div className="relative flex min-h-screen w-full flex-col items-center justify-center space-y-4">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src="/aroan-logo.svg" alt="Aroan's logo" className="h-auto w-1/2 max-w-lg" />
 
-      <p className="w-[80%] max-w-3xl text-center text-lg leading-tight text-white">
+      <div className="from-primary to-secondary relative rounded-full bg-gradient-to-b p-[2px]">
+        <div className="rounded-full bg-black px-4 py-2">Junior Next.js Developer</div>
+      </div>
+
+      {/* Description */}
+      <p className="text-foreground w-[80%] max-w-3xl text-center text-lg leading-tight">
         Turning ideas into projects through logical problem-solving, creative experimentation, and
         attention to detail. Builds on strong fundamentals to create modern, interactive
         applications.
       </p>
 
-      <Button>View Projects</Button>
+      <Button className="bg-white text-black hover:scale-105 hover:bg-white">View Projects</Button>
       <HeroBackground />
     </div>
-  )
-
-  return (
-    <DaisyWrapper>
-      <div className="ds-hero bg-base-200 min-h-screen">
-        <div className="ds-hero-content text-center">
-          <div className="max-w-md space-y-6">
-            <div>
-              <h1 className="text-5xl font-bold">Josh</h1>
-              <p className="text-muted-foreground text-xl">Junior React / Next.js Developer</p>
-            </div>
-
-            <p className="text-lg leading-relaxed">
-              Turning ideas into projects through logical problem-solving, creative experimentation,
-              and attention to detail. Builds on strong fundamentals to create modern, interactive
-              applications.
-            </p>
-
-            <button className="ds-btn ds-btn-primary">View my work</button>
-          </div>
-        </div>
-      </div>
-    </DaisyWrapper>
   )
 }
 

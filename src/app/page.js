@@ -2,8 +2,10 @@ import AboutMeSection from '@/components/AboutMeSection'
 import DaisyThemePreview from '@/components/DaisyThemePreview'
 import FeaturedProjectsSection from '@/components/FeaturedProjectsSection'
 import HeroSection from '@/components/HeroSection'
+import MissionStatementSection from '@/components/MissionStatementSection'
 import NavBar from '@/components/NavBar'
 import NightContainer from '@/components/NightContainer'
+import { SunsetBackgroundBottom } from '@/components/StyledSunsetBackground'
 import Image from 'next/image'
 
 export default function Home() {
@@ -11,6 +13,7 @@ export default function Home() {
     <>
       <NavBar />
       <HeroSection />
+      <MissionStatementSection />
       <FeaturedProjectsSection />
       <AboutMeSection />
     </>

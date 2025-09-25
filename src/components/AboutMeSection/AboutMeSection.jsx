@@ -5,33 +5,37 @@ import SkillsSection from '../SkillsSection'
 import PaddingWrapper from '../PaddingWrapper'
 import Highlight from '../Highlight'
 import Image from 'next/image'
+import { SunsetBackgroundBottom } from '../StyledSunsetBackground'
 
 const stats = [
   {
     label: 'Frontend Development',
-    className: 'ds-badge-accent',
+    className: 'ds-badge-primary',
     items: ['HTML / CSS', 'JavaScript', 'Tailwind CSS', 'shadcn/ui', 'DaisyUI'],
-    softStyle: ['React', 'Next.js', 'Vercel'],
+    softStyle: ['React', 'Next.js', 'Vercel', 'Framer Motion'],
   },
   {
     label: 'UI / UX Design',
-    className: 'ds-badge-secondary',
+    className: 'ds-badge-accent',
     items: ['Adobe Creative Suite'],
     softStyle: ['Figma', 'Photoshop', 'Illustrator'],
   },
   {
     label: 'Other Tools',
-    className: 'ds-badge-primary',
+    className: 'ds-badge-foreground',
     items: ['Github', 'Firebase', 'NPM', 'Sanity Studio'],
   },
 ]
 
 function AboutMeSection() {
   return (
-    <PaddingWrapper as="section" id="about" className="mx-auto max-w-5xl">
-      <div className="grid items-start gap-12 lg:grid-cols-2">
+    <PaddingWrapper as="section" id="about" className="relative w-full pb-10">
+      <div className="mx-auto grid max-w-5xl items-start gap-12 lg:grid-cols-2">
         <div className="my-auto space-y-8">
+          {/* Image */}
           <ProfilePhoto />
+
+          {/* Badges */}
           <DaisyWrapper>
             <div className="gap-8 space-y-4 text-center">
               {stats.map((group, idx) => (
@@ -56,6 +60,7 @@ function AboutMeSection() {
           </DaisyWrapper>
         </div>
 
+        {/* Description */}
         <div className="px-4 lg:px-0">
           <div className="mb-12">
             <h2 className="text-primary mb-6 text-center text-4xl font-bold md:text-5xl lg:text-left">
@@ -99,6 +104,9 @@ function AboutMeSection() {
           </div>
         </div>
       </div>
+
+      {/* Background */}
+      <SunsetBackgroundBottom />
     </PaddingWrapper>
   )
 }

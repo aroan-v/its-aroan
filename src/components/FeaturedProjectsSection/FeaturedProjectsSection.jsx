@@ -31,7 +31,7 @@ const highlightProjects = [
     technologies: ['Vercel', 'Tailwind CSS', 'Zustand', 'D3-Charts', 'Shadcn/UI', 'cronjob'],
     badges: [
       {
-        className: 'ds-badge-outline  ds-badge-accent',
+        className: 'ds-badge-outline  ds-badge-primary',
         items: ['Next.js'],
       },
       {
@@ -39,7 +39,7 @@ const highlightProjects = [
         items: ['Tailwind CSS', 'Zustand', 'D3-Charts'],
       },
       {
-        className: 'ds-badge-outline  ds-badge-foreground',
+        className: 'ds-badge-outline  ds-badge-accent',
         items: ['cronjob', 'Vercel', 'Github Actions', 'Shadcn/UI'],
       },
     ],
@@ -64,9 +64,9 @@ const highlightProjects = [
       'Tracking meals can feel overwhelming, especially when standard macro trackers force users to pick from limited serving options or predefined ingredients. It’s easy to get lost in all the details and feel restricted by the app. That’s why a simpler and more accessible solution was needed.',
       <>
         {'With the power of AI—using'}
-        <Highlight className="text-accent font-bold"> Gemma</Highlight>
+        <Highlight className="text-secondary font-bold"> Gemma</Highlight>
         {' (by Google and Gemini) and '}
-        <Highlight className="text-accent font-bold">Groq</Highlight>
+        <Highlight className="text-secondary font-bold">Groq</Highlight>
         {
           ' as the API provider—users can now just type a detailed description of what they ate. This freedom of description is the core of its accuracy. Unlike standard trackers that limit to predefined ingredients or generic meals, the AI understands the nuances of an input, such as specifying '
         }
@@ -91,7 +91,7 @@ const highlightProjects = [
     ],
     badges: [
       {
-        className: 'ds-badge-outline  ds-badge-accent',
+        className: 'ds-badge-outline  ds-badge-primary',
         items: ['Next.js'],
       },
       {
@@ -99,7 +99,7 @@ const highlightProjects = [
         items: ['Groq', 'Gemma-2b', 'Tailwind CSS', 'DaisyUI'],
       },
       {
-        className: 'ds-badge-outline  ds-badge-foreground',
+        className: 'ds-badge-outline  ds-badge-accent',
         items: ['Vercel', 'Shadcn/UI'],
       },
     ],
@@ -173,7 +173,7 @@ const highlightProjects = [
     ],
     badges: [
       {
-        className: 'ds-badge-outline  ds-badge-accent',
+        className: 'ds-badge-outline  ds-badge-primary',
         items: ['Next.js'],
       },
       {
@@ -181,7 +181,7 @@ const highlightProjects = [
         items: ['Tailwind CSS'],
       },
       {
-        className: 'ds-badge-outline  ds-badge-foreground',
+        className: 'ds-badge-outline  ds-badge-accent',
         items: ['Vercel', 'Shadcn/UI'],
       },
     ],
@@ -272,24 +272,24 @@ const projects = [
 
 function FeaturedProjectsSection() {
   return (
-    <section id="projects" className="relative container mx-auto mt-20 space-y-8 px-4 py-20">
-      <div className="mb-16 text-center">
+    <section id="projects" className="relative mx-auto w-full space-y-8 py-20">
+      <div className="mx-auto mb-16 max-w-2xl px-8 text-center">
         <h2 className="mb-4 text-4xl font-bold md:text-5xl">
-          <span className="text-primary">Featured Projects</span>
+          <span className="text-foreground">Featured Projects</span>
         </h2>
-        <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
+        <p className="text-foreground text-lg leading-tight">
           A showcase of my recent web development projects, featuring modern technologies and
           creative solutions.
         </p>
       </div>
 
-      <div className="mx-auto max-w-6xl space-y-8">
+      <div className="mx-auto max-w-6xl space-y-8 px-12">
         {highlightProjects.map((project, index) => (
           <HighlightCard key={index} index={index} project={project} />
         ))}
       </div>
 
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-12 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}

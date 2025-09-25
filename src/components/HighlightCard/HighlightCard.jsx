@@ -5,18 +5,19 @@ import { ExternalLink, Github } from 'lucide-react'
 import Image from 'next/image'
 import DaisyWrapper from '../DaisyWrapper'
 import { devLog } from '@/lib/logger'
+import StyledCardBackground from '../StyledCardBackground'
 
 function HighlightCard({ project, index }) {
   devLog('project', project)
 
-  const cardClasses = `group bg-base-200 overflow-hidden lg:flex ${
+  const cardClasses = `group bg-base-300/20 backdrop-blur-3xl shadow-sm hover:shadow-lg hover:shadow-secondary shadow-inner shadow-neutral overflow-hidden lg:flex ${
     index % 2 === 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'
   }`
 
   return (
     <Card key={project.id} className={cardClasses}>
       {/* Image */}
-      <div className="bg-neutral/20 shadow-neutral relative aspect-video w-full flex-shrink-0 rounded-xl shadow-inner lg:m-10 lg:h-auto lg:w-80 lg:bg-transparent lg:shadow-none">
+      <div className="bg-neutral/30 relative aspect-video w-full flex-shrink-0 rounded-xl lg:m-10 lg:h-auto lg:w-80 lg:bg-transparent">
         {/* Desktop Image */}
         {project.images?.desktop && (
           <Image
@@ -48,7 +49,7 @@ function HighlightCard({ project, index }) {
 
       {/* Content */}
       <CardContent className="flex flex-1 flex-col justify-between p-6 lg:p-12">
-        <CardTitle className="text-primary mb-3 flex items-end text-xl font-semibold">
+        <CardTitle className="text-foreground mb-3 flex items-end text-xl font-semibold">
           {project.logoSrc && (
             <Image
               src={project.logoSrc}
@@ -80,7 +81,7 @@ function HighlightCard({ project, index }) {
 
         {/* Buttons */}
         <CardAction>
-          <Button asChild variant="default" size="sm">
+          <Button asChild variant="gradient" size="sm">
             <a
               href={project.liveUrl}
               target="_blank"
@@ -91,7 +92,7 @@ function HighlightCard({ project, index }) {
               Live Demo
             </a>
           </Button>
-          <Button asChild variant="default" size="sm">
+          <Button asChild variant="gradient" size="sm">
             <a
               href={project.githubUrl}
               target="_blank"
@@ -104,6 +105,9 @@ function HighlightCard({ project, index }) {
           </Button>
         </CardAction>
       </CardContent>
+
+      {/* Backdrop */}
+      {/* <StyledCardBackground /> */}
     </Card>
   )
 }

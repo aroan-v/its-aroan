@@ -11,7 +11,8 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: 'bg-muted/80 text-muted-foreground shadow-xs hover:bg-muted',
-        white: 'bg-white',
+        primary: 'bg-primary/80 text-primary-content shadow-xs hover:bg-primary',
+        secondary: 'bg-secondary text-secondary-content shadow-xs ',
         accent: 'bg-accent/80 text-accent-foreground shadow-xs hover:bg-accent',
 
         destructive: cn(
@@ -21,7 +22,8 @@ const buttonVariants = cva(
           'disabled:opacity-50 disabled:pointer-events-none'
         ),
 
-        outline: 'border border-muted/50 text-muted-foreground hover:text-white hover:bg-muted/70',
+        outline:
+          'border border-muted/50 text-muted-foreground hover:text-foreground hover:bg-muted/70',
 
         secondary: 'bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80',
 
@@ -34,10 +36,10 @@ const buttonVariants = cva(
           'relative inline-flex items-center justify-center rounded-xl px-6 py-3',
 
           // Typography
-          'font-semibold text-white',
+          'font-bold text-primary-content',
 
-          // Background (direct gradient)
-          'bg-gradient-to-r from-accent to-neutral',
+          // Background
+          'bg-radial-[at_25%_25%] from-primary to-secondary',
 
           // Base effects
           'shadow-md transition-all',
@@ -53,7 +55,7 @@ const buttonVariants = cva(
         ),
 
         defaultOutline:
-          'border border-muted/90 text-muted-foreground hover:text-white hover:bg-muted/70',
+          'border border-muted/90 text-muted-foreground hover:text-foreground hover:bg-muted/70',
         primaryOutline:
           'border border-primary text-primary hover:bg-primary hover:text-primary-foreground',
         secondaryOutline:
