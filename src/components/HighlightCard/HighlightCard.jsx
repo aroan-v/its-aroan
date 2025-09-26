@@ -55,8 +55,8 @@ function HighlightCard({ project, index }) {
 
       {/* Content */}
       <div className="p-8 lg:p-18">
-        <CardContent className="mb-6 flex flex-1 flex-col justify-between">
-          <CardTitle className="text-foreground mb-3 flex items-end text-xl font-semibold">
+        <CardContent className="mb-6 flex flex-1 flex-col justify-between space-y-4">
+          <CardTitle className="text-foreground flex items-end text-xl font-semibold">
             {project.logoSrc && (
               <Image
                 src={project.logoSrc}
@@ -70,10 +70,6 @@ function HighlightCard({ project, index }) {
             {project.title}
           </CardTitle>
 
-          <div className="text-muted-foreground lg:text-md text-sm leading-relaxed *:mb-4">
-            {project.description}
-          </div>
-
           <DaisyWrapper className="flex flex-wrap gap-2">
             {project?.badges?.map((badge, index) =>
               badge?.items?.map((item, i) => (
@@ -83,6 +79,10 @@ function HighlightCard({ project, index }) {
               ))
             )}
           </DaisyWrapper>
+
+          <div className="text-muted-foreground lg:text-md text-sm leading-relaxed *:mb-4">
+            {project.description}
+          </div>
         </CardContent>
 
         <CardAction>
@@ -90,23 +90,6 @@ function HighlightCard({ project, index }) {
           <StyledAnchor url={project.githubUrl} mode="github" />
         </CardAction>
       </div>
-
-      {/* <CardContent>
-        <DaisyWrapper className="mb-6 flex flex-wrap gap-2">
-          {project?.badges?.map((badge, index) =>
-            badge?.items?.map((item, i) => (
-              <div key={`${index}-${i}`} className={`ds-badge ${badge.className}`}>
-                {item}
-              </div>
-            ))
-          )}
-        </DaisyWrapper>
-        <CardAction>
-          <StyledTag />
-        </CardAction>
-      </CardContent> */}
-
-      {/* Backdrop */}
       <RedGlassBackground />
     </Card>
   )

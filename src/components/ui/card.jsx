@@ -17,7 +17,7 @@ function Card({ className, ...props }) {
         'rounded-xl',
 
         // Spacing
-        'pb-6',
+        'pb-4',
 
         // Effects
         'backdrop-blur-lg',

@@ -7,6 +7,7 @@ import ProjectCard from '../ProjectCard'
 import HighlightCard from '../HighlightCard'
 import Highlight from '../Highlight'
 import StyledSunsetBackground from '../StyledSunsetBackground'
+import { cn } from '@/lib/utils'
 
 const highlightProjects = [
   {
@@ -19,22 +20,22 @@ const highlightProjects = [
       <>
         <p>
           Fans will do anything to support their favorite artists—even lose sleep to vote in online
-          polls and awards shows. I saw this firsthand when I joined the effort to vote for Will
-          Ashley, who was nominated for Nylon’s Boldest Breakout Star.
+          polls and awards shows. I saw this when I joined the effort to vote for Will Ashley, who
+          was nominated for Nylon’s Boldest Breakout Star.
         </p>
         <p>
           {
-            "To make the voting more interesting, and to bring out the fandom's competitive, I created an interactive vote tracker. It was a visual tool designed to reimagine the typically boring, straightforward poll result. Inspired by the dynamic and engaging vote displays of MTV EMAs and MTV Hottest, I built a system that showcased the results with a unique visual flair."
+            "To make the voting more interesting, and to bring out the fandom's competitive side, I created an interactive vote tracker. It was a visual tool designed to reimagine the typically boring, straightforward poll result. Inspired by the dynamic and engaging vote displays of MTV EMAs and MTV Hottest, I built a system that showcased the results with a unique visual flair."
           }
         </p>
 
         <p>
           {'Using '}
-          <Highlight className="text-accent font-bold">cron-job.org</Highlight>
+          <Highlight className="text-secondary font-bold">cron-job.org</Highlight>
           {' and '}
-          <Highlight className="text-accent font-bold">GitHub Actions</Highlight>
+          <Highlight className="text-secondary font-bold">GitHub Actions</Highlight>
           {
-            ', I took a snapshot of the vote standings every five minutes, from August 19 to September 1. This real-time data fed directly into the dashboard, allowing us to see our progress in an exciting new way.'
+            ', I took a snapshot of the vote standings every five minutes, from August 19 to September 1. This real-time data was fed directly into the dashboard, allowing us to see our progress in an exciting new way.'
           }
         </p>
 
@@ -72,147 +73,169 @@ const highlightProjects = [
     liveUrl: 'https://nylon-boldest-breakout-star-will.vercel.app',
     githubUrl: 'https://github.com/aroan-v/vote-dashboard',
   },
-  // {
-  //   id: 2,
-  //   title: 'AI Macro Calculator',
-  //   logoSrc: '/project-logos/ai-macro-calculator.jpg',
-  //   alt: 'Logo for the AI Macro Calculator project',
-  //   description: [
-  //     'Tracking meals can feel overwhelming, especially when standard macro trackers force users to pick from limited serving options or predefined ingredients. It’s easy to get lost in all the details and feel restricted by the app. That’s why a simpler and more accessible solution was needed.',
-  //     <>
-  //       {'With the power of AI—using'}
-  //       <Highlight className="text-secondary font-bold"> Gemma</Highlight>
-  //       {' (by Google and Gemini) and '}
-  //       <Highlight className="text-secondary font-bold">Groq</Highlight>
-  //       {
-  //         ' as the API provider—users can now just type a detailed description of what they ate. This freedom of description is the core of its accuracy. Unlike standard trackers that limit to predefined ingredients or generic meals, the AI understands the nuances of an input, such as specifying '
-  //       }
-  //       <span className="italic">pork adobo without potatoes</span>
-  //       {' or '}
-  //       <span className="italic">grilled chicken breast with minimal oil</span>
-  //       {
-  //         '. The AI then calculates calories and protein more accurately than traditional apps, handling the complexities of ingredients and portions.'
-  //       }
-  //     </>,
-  //     "All that's really needed is a weighing scale and a record of what was eaten. Users can input the details, and let AI do the math. Simple, fast, and precise.",
-  //   ],
-  //   technologies: [
-  //     'Next.js',
-  //     'React',
-  //     'Vercel',
-  //     'Groq',
-  //     'Gemma-2b',
-  //     'Tailwind CSS',
-  //     'Shadcn/UI',
-  //     'DaisyUI',
-  //   ],
-  //   badges: [
-  //     {
-  //       className: 'ds-badge-outline  ds-badge-primary',
-  //       items: ['Next.js'],
-  //     },
-  //     {
-  //       className: 'ds-badge-outline  ds-badge-secondary',
-  //       items: ['Groq', 'Gemma-2b', 'Tailwind CSS', 'DaisyUI'],
-  //     },
-  //     {
-  //       className: 'ds-badge-outline  ds-badge-accent',
-  //       items: ['Vercel', 'Shadcn/UI'],
-  //     },
-  //   ],
-  //   image: ['/projects/macro-calculator-1.jpg', '/projects/macro-calculator-2.jpg'],
-  //   images: {
-  //     desktop: '/projects/calculator-desktop.png',
-  //     mobile: '/projects/calculator-mobile.png',
-  //   },
-  //   altImages: {
-  //     desktop: 'Ipad mockup of AI Macro Calculator project.',
-  //     mobile: 'Ipad mockup of AI Macro Calculator project.',
-  //   },
-  //   liveUrl: 'https://ai-macro-calculator.vercel.app',
-  //   githubUrl: 'https://github.com/aroan-v/forge-app',
-  // },
-  // {
-  //   id: 3,
-  //   title: 'Nylon Vote Page',
-  //   logoSrc: '/project-logos/vote-page.jpg',
-  //   alt: 'Logo for Nylon Vote Page project',
-  //   description: [
-  //     <>
-  //       {
-  //         'This project started during a fandom vote competition where our team was falling behind. The gap was widening, and to make things worse, participation from our fandom was low. The few of us who were still voting felt like our efforts weren’t moving the needle. That’s when I began thinking: how can I make voting easier and more motivating for the ones still in the fight?'
-  //       }
-  //     </>,
-  //     <>
-  //       {'My first idea was '}
-  //       <Highlight className="text-accent font-bold">efficiency</Highlight>
-  //       {
-  //         '. I dug into the host poll’s script, rooted it out, and re-injected it into my own page. Then I made five iframe copies of it, so voters could cast multiple votes faster across different browsers and devices. To prevent issues, I also figured out what triggered the '
-  //       }
-  //       <span className="italic">rate limits</span>
-  //       {' and added instructions so voters could avoid getting blocked.'}
-  //     </>,
-  //     <>
-  //       {'The second idea was '}
-  //       <Highlight className="text-accent font-bold">morale</Highlight>
-  //       {
-  //         '. I built a votes sent tracker that counted every successful vote through the server’s response and stored the number in local storage. This way, each voter could see their personal total across sessions — a number they could proudly share with the group.'
-  //       }
-  //     </>,
-  //     <>
-  //       {
-  //         'I also added a live gap counter that refreshed every 3 seconds, plus a redesigned results page that was far more engaging than the dull original.'
-  //       }
-  //     </>,
-  //     <>
-  //       {'In the end, the project hit its two goals: it '}
-  //       <Highlight className="text-accent font-bold">empowered voters</Highlight>
-  //       {' by giving them a clear count of their contributions, and it '}
-  //       <Highlight className="text-accent font-bold">made voting less boring</Highlight>
-  //       {' by turning it into a more interactive and motivating experience.'}
-  //     </>,
-  //     <>
-  //       {
-  //         'We didn’t win the competition — we finished in second place — but morale was high. Voters could finally see and celebrate how much they had contributed, and that made the whole experience worth it.'
-  //       }
-  //     </>,
-  //   ],
+  {
+    id: 2,
+    title: 'AI Macro Calculator',
+    logoSrc: '/project-logos/ai-macro-calculator.jpg',
+    alt: 'Logo for the AI Macro Calculator project',
+    description: (
+      <>
+        <p>
+          Tracking meals can feel overwhelming, especially when standard macro trackers force users
+          to pick from limited serving options or predefined ingredients. It’s easy to get lost in
+          all the details and feel restricted by the app. That’s why a simpler and more accessible
+          solution was needed.
+        </p>
+        <p>
+          {'With the power of AI—using '}
+          <Highlight className="text-secondary font-bold">Gemma</Highlight>
+          {' (by Google and Gemini) and '}
+          <Highlight className="text-secondary font-bold">Groq</Highlight>
+          {
+            ' as the API provider—users can now just type a detailed description of what they ate. This freedom of description is the core of its accuracy. Unlike standard trackers that limit to predefined ingredients or generic meals, the AI understands the nuances of an input, such as specifying '
+          }
+          <span className="italic">pork adobo without potatoes</span>
+          {' or '}
+          <span className="italic">grilled chicken breast with minimal oil</span>
+          {
+            '. The AI then calculates calories and protein more accurately than traditional apps, handling the complexities of ingredients and portions.'
+          }
+        </p>
+        <p>
+          {
+            "All that's really needed is a weighing scale and a record of what was eaten. Users can input the details, and let AI do the math. Simple, fast, and precise."
+          }
+        </p>
+      </>
+    ),
 
-  //   technologies: [
-  //     'Next.js',
-  //     'React',
-  //     'Vercel',
-  //     'Groq',
-  //     'Gemma-2b',
-  //     'Tailwind CSS',
-  //     'Shadcn/UI',
-  //     'DaisyUI',
-  //   ],
-  //   badges: [
-  //     {
-  //       className: 'ds-badge-outline  ds-badge-primary',
-  //       items: ['Next.js'],
-  //     },
-  //     {
-  //       className: 'ds-badge-outline  ds-badge-secondary',
-  //       items: ['Tailwind CSS'],
-  //     },
-  //     {
-  //       className: 'ds-badge-outline  ds-badge-accent',
-  //       items: ['Vercel', 'Shadcn/UI'],
-  //     },
-  //   ],
-  //   images: {
-  //     desktop: '/projects/vote-page-desktop.png',
-  //     mobile: '/projects/vote-page-mobile.png',
-  //   },
-  //   altImages: {
-  //     desktop: 'Mac mockup of the Vote Page project.',
-  //     mobile: 'Android phone mockup of the Vote Page project.',
-  //   },
-  //   liveUrl: 'https://project-p5lze.vercel.app',
-  //   githubUrl: 'https://github.com/aroan-v/nylon-vote-page',
-  // },
+    technologies: [
+      'Next.js',
+      'React',
+      'Vercel',
+      'Groq',
+      'Gemma-2b',
+      'Tailwind CSS',
+      'Shadcn/UI',
+      'DaisyUI',
+    ],
+    badges: [
+      {
+        className: 'ds-badge-outline  ds-badge-primary',
+        items: ['Next.js'],
+      },
+      {
+        className: 'ds-badge-outline  ds-badge-secondary',
+        items: ['Groq', 'Gemma-2b', 'Tailwind CSS', 'DaisyUI'],
+      },
+      {
+        className: 'ds-badge-outline  ds-badge-accent',
+        items: ['Vercel', 'Shadcn/UI'],
+      },
+    ],
+    image: ['/projects/macro-calculator-1.jpg', '/projects/macro-calculator-2.jpg'],
+    images: {
+      desktop: '/projects/calculator-desktop.png',
+      mobile: '/projects/calculator-mobile.png',
+    },
+    altImages: {
+      desktop: 'Ipad mockup of AI Macro Calculator project.',
+      mobile: 'Ipad mockup of AI Macro Calculator project.',
+    },
+    liveUrl: 'https://ai-macro-calculator.vercel.app',
+    githubUrl: 'https://github.com/aroan-v/forge-app',
+  },
+  {
+    id: 3,
+    title: 'Nylon Vote Page',
+    logoSrc: '/project-logos/vote-page.jpg',
+    alt: 'Logo for Nylon Vote Page project',
+    description: (
+      <>
+        <p>
+          This project started during a fandom vote competition where our team was falling behind.
+          The gap was widening, and to make things worse, participation from our fandom was low. The
+          few of us who were still voting felt like our efforts weren’t moving the needle. That’s
+          when I began thinking:{' '}
+          <span className="italic">
+            {`"How can I make voting easier and more motivating for the ones still in the fight?"`}
+          </span>
+        </p>
+
+        <p>
+          {'My first idea was '}
+          <Highlight className="text-secondary font-bold">efficiency</Highlight>
+          {
+            '. I dug into the host poll’s script, rooted it out, and re-injected it into my own page. Then I made five iframe copies of it, so voters could cast multiple votes faster across different browsers and devices. To prevent issues, I also figured out what triggered the '
+          }
+          <span className="italic">rate limits</span>
+          {' and added instructions so voters could avoid getting blocked.'}
+        </p>
+
+        <p>
+          {'The second idea was '}
+          <Highlight className="text-secondary font-bold">morale</Highlight>
+          {
+            '. I built a votes sent tracker that counted every successful vote through the server’s response and stored the number in local storage. This way, each voter could see their personal total across sessions — a number they could proudly share with the group.'
+          }
+        </p>
+
+        <p>
+          I also added a live gap counter that refreshed every 3 seconds, plus a redesigned results
+          page that was far more engaging than the dull original.
+        </p>
+
+        <p>
+          {'In the end, the project hit its two goals: it '}
+          <Highlight className="text-secondary font-bold">empowered voters</Highlight>
+          {' by giving them a clear count of their contributions, and it '}
+          <Highlight className="text-secondary font-bold">made voting less boring</Highlight>
+          {' by turning it into a more interactive and motivating experience.'}
+        </p>
+
+        <p>
+          We didn’t win the competition — we finished in second place — but morale was high. Voters
+          could finally see and celebrate how much they had contributed, and that made the whole
+          experience worth it.
+        </p>
+      </>
+    ),
+
+    technologies: [
+      'Next.js',
+      'React',
+      'Vercel',
+      'Groq',
+      'Gemma-2b',
+      'Tailwind CSS',
+      'Shadcn/UI',
+      'DaisyUI',
+    ],
+    badges: [
+      {
+        className: 'ds-badge-outline  ds-badge-primary',
+        items: ['Next.js'],
+      },
+      {
+        className: 'ds-badge-outline  ds-badge-secondary',
+        items: ['Tailwind CSS'],
+      },
+      {
+        className: 'ds-badge-outline  ds-badge-accent',
+        items: ['Vercel', 'Shadcn/UI'],
+      },
+    ],
+    images: {
+      desktop: '/projects/vote-page-desktop.png',
+      mobile: '/projects/vote-page-mobile.png',
+    },
+    altImages: {
+      desktop: 'Mac mockup of the Vote Page project.',
+      mobile: 'Android phone mockup of the Vote Page project.',
+    },
+    liveUrl: 'https://project-p5lze.vercel.app',
+    githubUrl: 'https://github.com/aroan-v/nylon-vote-page',
+  },
 ]
 
 const projects = [

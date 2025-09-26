@@ -5,6 +5,7 @@ import { ExternalLink, Github } from 'lucide-react'
 import Image from 'next/image'
 import DaisyWrapper from '../DaisyWrapper'
 import RedGlassBackground from '../RedGlassBackground'
+import StyledAnchor from '../StyledAnchor'
 
 function ProjectCard({ project }) {
   return (
@@ -23,13 +24,12 @@ function ProjectCard({ project }) {
         />
       </div>
 
-      <CardContent className="flex flex-col p-6">
-        <h3 className="text-foreground mb-3 text-xl font-semibold">{project.title}</h3>
-        <p className="text-muted-foreground mb-4 text-sm leading-relaxed">{project.description}</p>
+      <CardContent className="flex flex-col space-y-4 p-6">
+        <h3 className="text-foreground text-xl font-semibold">{project.title}</h3>
 
         {/* Badges */}
 
-        <DaisyWrapper className="mb-6 flex flex-wrap gap-2">
+        <DaisyWrapper className="flex flex-wrap gap-2">
           {project?.badges?.map((badge, index) =>
             badge?.items?.map((item, i) => (
               <div key={`${index}-${i}`} className={`ds-badge ${badge.className}`}>
@@ -38,31 +38,12 @@ function ProjectCard({ project }) {
             ))
           )}
         </DaisyWrapper>
+        <p className="text-muted-foreground mb-4 text-sm leading-relaxed">{project.description}</p>
 
         {/* Buttons */}
         <CardAction>
-          <Button asChild variant="gradient" size="lg">
-            <a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1"
-            >
-              <ExternalLink size={16} />
-              Live Demo
-            </a>
-          </Button>
-          <Button asChild variant="gradient" size="lg">
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1"
-            >
-              <Image src="/github-mark.svg" alt="Logo of Github" width={18} height={18} />
-              Code
-            </a>
-          </Button>
+          <StyledAnchor url={project.liveUrl} mode="live" />
+          <StyledAnchor url={project.githubUrl} mode="github" />
         </CardAction>
       </CardContent>
 

@@ -25,7 +25,7 @@ function StyledAnchor({ url, mode }) {
         // Backgrounds (light + dark mode)
         'bg-[linear-gradient(#fff,#fff),linear-gradient(#fff_50%,rgba(255,255,255,0.6)_80%,rgba(0,0,0,0)),linear-gradient(90deg,hsl(0,100%,63%),hsl(0, 100%, 62.94117647058823%),hsl(210,100%,63%),hsl(195,100%,63%),hsl(270,100%,63%))]',
         // Dark mode background with sunset gradient
-        'dark:bg-[linear-gradient(#200b01,#642f0b),linear-gradient(#121213_50%,rgba(18,18,19,0.6)_80%,rgba(18,18,19,0)),linear-gradient(90deg,hsl(0,100%,63%),hsl(30,100%,63%),hsl(0,100%,63%),hsl(330,100%,63%),hsl(30,100%,63%))]',
+        'dark:bg-[linear-gradient(#200b01,#620202),linear-gradient(#121213_50%,rgba(18,18,19,0.6)_80%,rgba(18,18,19,0)),linear-gradient(90deg,hsl(0,100%,63%),hsl(30,100%,63%),hsl(0,100%,63%),hsl(330,100%,63%),hsl(30,100%,63%))]',
 
         //  Background Options
         'bg-[length:200%]',

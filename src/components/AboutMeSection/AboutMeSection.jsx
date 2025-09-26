@@ -17,7 +17,7 @@ const stats = [
   },
   {
     label: 'UI / UX Design',
-    className: 'ds-badge-accent',
+    className: 'ds-badge-secondary',
     items: ['Adobe Creative Suite'],
     softStyle: ['Figma', 'Photoshop', 'Illustrator'],
   },
