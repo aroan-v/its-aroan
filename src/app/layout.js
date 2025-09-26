@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${poppins.variable} ${pacifico.variable} ${yellowtail.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
     >
-      <body className="bg-black pb-10 font-sans">{children}</body>
+      <body className="dark bg-black pb-10 font-sans">{children}</body>
     </html>
   )
 }

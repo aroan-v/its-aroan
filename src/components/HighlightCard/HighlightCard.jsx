@@ -8,11 +8,13 @@ import { devLog } from '@/lib/logger'
 import StyledCardBackground from '../StyledCardBackground'
 import GlassBackground from '../GlassBackground'
 import RedGlassBackground from '../RedGlassBackground'
+import StyledTag from '../StyledTag'
+import StyledAnchor from '../StyledAnchor'
 
 function HighlightCard({ project, index }) {
   devLog('project', project)
 
-  const cardClasses = `bg-transparent group relative backdrop-blur-3xl shadow-sm hover:shadow-lg shadow-secondary overflow-hidden lg:flex ${
+  const cardClasses = `bg-transparent group relative backdrop-blur-3xl shadow-sm hover:shadow-lg  overflow-hidden lg:flex ${
     index % 2 === 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'
   }`
 
@@ -52,27 +54,44 @@ function HighlightCard({ project, index }) {
       </div>
 
       {/* Content */}
-      <CardContent className="flex flex-1 flex-col justify-between p-6 lg:p-12">
-        <CardTitle className="text-foreground mb-3 flex items-end text-xl font-semibold">
-          {project.logoSrc && (
-            <Image
-              src={project.logoSrc}
-              alt={project.alt}
-              width={35}
-              height={35}
-              className="mr-3 rounded-md"
-            />
-          )}
+      <div className="p-8 lg:p-18">
+        <CardContent className="mb-6 flex flex-1 flex-col justify-between">
+          <CardTitle className="text-foreground mb-3 flex items-end text-xl font-semibold">
+            {project.logoSrc && (
+              <Image
+                src={project.logoSrc}
+                alt={project.alt}
+                width={35}
+                height={35}
+                className="mr-3 rounded-md"
+              />
+            )}
 
-          {project.title}
-        </CardTitle>
+            {project.title}
+          </CardTitle>
 
-        {project.description?.map((paragraph, index) => (
-          <p className="text-muted-foreground mb-4 text-sm leading-relaxed" key={index}>
-            {paragraph}
-          </p>
-        ))}
+          <div className="text-muted-foreground lg:text-md text-sm leading-relaxed *:mb-4">
+            {project.description}
+          </div>
 
+          <DaisyWrapper className="flex flex-wrap gap-2">
+            {project?.badges?.map((badge, index) =>
+              badge?.items?.map((item, i) => (
+                <div key={`${index}-${i}`} className={`ds-badge ${badge.className}`}>
+                  {item}
+                </div>
+              ))
+            )}
+          </DaisyWrapper>
+        </CardContent>
+
+        <CardAction>
+          <StyledAnchor url={project.liveUrl} mode="live" />
+          <StyledAnchor url={project.githubUrl} mode="github" />
+        </CardAction>
+      </div>
+
+      {/* <CardContent>
         <DaisyWrapper className="mb-6 flex flex-wrap gap-2">
           {project?.badges?.map((badge, index) =>
             badge?.items?.map((item, i) => (
@@ -82,33 +101,10 @@ function HighlightCard({ project, index }) {
             ))
           )}
         </DaisyWrapper>
-
-        {/* Buttons */}
         <CardAction>
-          <Button asChild variant="gradient" size="sm">
-            <a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2"
-            >
-              <ExternalLink size={16} />
-              Live Demo
-            </a>
-          </Button>
-          <Button asChild variant="gradient" size="sm">
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2"
-            >
-              <Github size={16} />
-              Code
-            </a>
-          </Button>
+          <StyledTag />
         </CardAction>
-      </CardContent>
+      </CardContent> */}
 
       {/* Backdrop */}
       <RedGlassBackground />

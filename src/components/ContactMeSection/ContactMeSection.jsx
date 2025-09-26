@@ -2,6 +2,7 @@
 import { devLog } from '@/lib/logger'
 import React from 'react'
 import styled from 'styled-components'
+import { Button } from '../ui/button'
 
 const ContactMeSection = () => {
   const handleCopyEmail = () => {
@@ -12,6 +13,7 @@ const ContactMeSection = () => {
   const [isShown, setIsShown] = React.useState(false)
   const wrapperRef = React.useRef()
 
+  // Observer to animate the rotation and margin of the cards
   React.useEffect(() => {
     const node = wrapperRef.current
 
@@ -33,29 +35,39 @@ const ContactMeSection = () => {
 
   return (
     <StyledWrapper>
-      <div className="mb-6 w-full text-center">
+      {/* Header */}
+      <div className="relative mb-6 w-full text-center">
         <h2 className="text-accent font-display text-3xl font-bold md:text-4xl">
           I’d love to hear from you!
         </h2>
         <p className="text-sm italic">Check out my socials or download my resume</p>
+
+        {/* Target element observer  */}
+        <div className="absolute -bottom-30 mx-auto w-full" ref={wrapperRef}></div>
       </div>
 
-      <div ref={wrapperRef} className="group container w-full">
+      {/* Cards */}
+      <div className="group container w-full">
         <div
           data-text="Contact"
-          onClick={handleCopyEmail}
           className={`glass transition-all ${
             isShown ? 'mx-2 rotate-0' : '-m-[35px] -rotate-[15deg]'
           }`}
         >
-          <span className="text-white">Copy Email</span>
+          <Button variant="gradient">Github Profile</Button>
         </div>
 
         <div
           data-text="Download my CV"
           className={`glass transition-all ${isShown ? 'm-2 rotate-0' : '-m-[35px] rotate-0'}`}
         >
-          Okay
+          <Button
+            onClick={handleCopyEmail}
+            className="from-accent to-neutral text-neutral-content"
+            variant="gradient"
+          >
+            Download CV
+          </Button>
         </div>
 
         <div
@@ -63,7 +75,11 @@ const ContactMeSection = () => {
           className={`glass transition-all ${
             isShown ? 'mx-2 rotate-0' : '-m-[35px] rotate-[15deg]'
           }`}
-        ></div>
+        >
+          <Button onClick={handleCopyEmail} variant="gradient">
+            Copy email
+          </Button>
+        </div>
       </div>
     </StyledWrapper>
   )
@@ -71,12 +87,13 @@ const ContactMeSection = () => {
 
 const StyledWrapper = styled.div`
   margin-top: 50px;
+  position: relative;
 
   .container {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 25px;
   }
 
   .container .glass {
@@ -91,15 +108,14 @@ const StyledWrapper = styled.div`
     align-items: center;
     transition: 0.7s;
     border-radius: 12px;
-    /* margin: 0 -45px; */
     backdrop-filter: blur(10px);
-    transform: rotate(calc(var(--r) * 1deg));
+    /* transform: rotate(calc(var(--r) * 1deg)); */
   }
 
   /* .container:hover .glass {
     margin: 0 10px;
   } */
-
+  /* 
   .container .glass::before {
     content: attr(data-text);
     position: absolute;
@@ -111,7 +127,7 @@ const StyledWrapper = styled.div`
     justify-content: center;
     align-items: center;
     color: #fff;
-  }
+  } */
   .container .glass svg {
     font-size: 2.5em;
     fill: #fff;

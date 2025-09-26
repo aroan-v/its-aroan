@@ -33,7 +33,7 @@ const buttonVariants = cva(
 
         gradient: cn(
           // Layout & spacing
-          'relative inline-flex items-center justify-center rounded-xl px-6 py-3',
+          'relative inline-flex items-center justify-center rounded-md px-6 py-3',
 
           // Typography
           'font-bold text-primary-content',
@@ -68,7 +68,7 @@ const buttonVariants = cva(
       size: {
         default: 'h-9 px-4 py-2 has-[>svg]:px-3',
         sm: 'h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5',
-        lg: 'h-10 rounded-md px-6 has-[>svg]:px-4',
+        lg: 'h-10 rounded-md px-4',
         icon: 'size-9',
         fill: 'px-4 py-2 has-[>svg]:px-3',
         stretch: 'w-full px-4 py-2 has-[>svg]:px-3',
@@ -93,4 +93,9 @@ function Button({ className, variant, size, asChild = false, ...props }) {
   )
 }
 
-export { Button, buttonVariants }
+function UnstyledButton({ className, asChild = false, ...props }) {
+  const Comp = asChild ? props.asChild || 'button' : 'button'
+  return <Comp className={className} {...props} />
+}
+
+export { Button, buttonVariants, UnstyledButton }

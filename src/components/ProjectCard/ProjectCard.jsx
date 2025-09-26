@@ -10,7 +10,7 @@ function ProjectCard({ project }) {
   return (
     <Card
       key={project.id}
-      className="shadow-secondary relative flex-col rounded-xl bg-transparent pb-6 shadow-sm hover:shadow-lg"
+      className="shadow-neutral relative flex-col rounded-xl bg-transparent pb-6 shadow-sm hover:shadow-lg"
     >
       {/* Image container */}
       <div className="shadow-neutral relative h-80 overflow-hidden shadow-inner">
@@ -41,25 +41,25 @@ function ProjectCard({ project }) {
 
         {/* Buttons */}
         <CardAction>
-          <Button asChild variant="gradient" size="sm">
+          <Button asChild variant="gradient" size="lg">
             <a
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2"
+              className="flex items-center gap-1"
             >
               <ExternalLink size={16} />
               Live Demo
             </a>
           </Button>
-          <Button asChild variant="gradient" size="sm">
+          <Button asChild variant="gradient" size="lg">
             <a
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2"
+              className="flex items-center gap-1"
             >
-              <Github size={16} />
+              <Image src="/github-mark.svg" alt="Logo of Github" width={18} height={18} />
               Code
             </a>
           </Button>

@@ -103,8 +103,7 @@ function AboutMeSection() {
         </div>
       </div>
 
-      {/* Contact */}
-
+      {/* Contact Section */}
       <ContactMeSection />
 
       {/* Background */}
