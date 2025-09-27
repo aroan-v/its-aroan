@@ -5,10 +5,16 @@ import styled from 'styled-components'
 import { Button } from '../ui/button'
 import StyledDownloadButton from '../StyledDownloadButton'
 import StyledContactButton, { StyledCopyEmailButton } from '../StyledContactButton'
+import DaisyWrapper from '../DaisyWrapper'
+import RedGlassBackground from '../RedGlassBackground'
+import ContactAlert from '../ContactAlert'
 
 const ContactMeSection = () => {
   const [isShown, setIsShown] = React.useState(false)
+  const [showAlert, setShowAlert] = React.useState(false)
+
   const wrapperRef = React.useRef()
+  const messageRef = React.useRef('')
 
   // Observer to animate the rotation and margin of the cards
   React.useEffect(() => {
@@ -28,12 +34,20 @@ const ContactMeSection = () => {
     }
   }, [])
 
+  React.useEffect(() => {
+    if (!showAlert) return
+
+    const id = window.setTimeout(() => setShowAlert(false), 1500)
+
+    return () => window.clearInterval(id)
+  }, [showAlert])
+
   devLog('isShown', isShown)
 
   return (
     <StyledWrapper>
       {/* Header */}
-      <div className="relative mb-6 w-full text-center">
+      <div className="relative w-full text-center">
         <h2 className="text-accent font-display text-3xl font-bold md:text-4xl">
           I’d love to hear from you!
         </h2>
@@ -44,22 +58,29 @@ const ContactMeSection = () => {
       </div>
 
       {/* Cards */}
-      <div className="group container w-full">
+      <div className="group styledContainer w-full">
         <div className={`glass ${isShown ? 'shown' : 'hidden-left'}`}>
           Github
-          <StyledContactButton mode="github" />
+          <StyledContactButton mode="github" setShowAlert={setShowAlert} messageRef={messageRef} />
         </div>
 
         <div className={`glass ${isShown ? 'shown' : 'hidden-center'}`}>
           Download CV
-          <StyledContactButton mode="download-cv" />
+          <StyledContactButton
+            mode="download-cv"
+            setShowAlert={setShowAlert}
+            messageRef={messageRef}
+          />
         </div>
 
         <div data-text="Github" className={`glass ${isShown ? 'shown' : 'hidden-right'}`}>
           Copy Email
-          <StyledCopyEmailButton />
+          <StyledCopyEmailButton setShowAlert={setShowAlert} messageRef={messageRef} />
         </div>
       </div>
+
+      {/* Feedback */}
+      <ContactAlert showAlert={showAlert} messageRef={messageRef} />
     </StyledWrapper>
   )
 }
@@ -68,14 +89,17 @@ const StyledWrapper = styled.div`
   margin-top: 50px;
   position: relative;
 
-  .container {
+  & > * + * {
+    margin-top: 0.8rem;
+  }
+
+  .styledContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
   }
 
-  .container .unstyled {
+  .styledContainer .unstyled {
     position: relative;
     width: 125px;
     transition: 0.7s;
@@ -85,7 +109,7 @@ const StyledWrapper = styled.div`
     align-items: center;
   }
 
-  .container .glass {
+  .styledContainer .glass {
     position: relative;
     width: 125px;
     height: 125px;

@@ -2,11 +2,26 @@ import React from 'react'
 import styled from 'styled-components'
 import { Button } from '../ui/button'
 
-const StyledContactButton = ({ mode }) => {
+const StyledContactButton = ({ mode, setShowAlert, messageRef }) => {
+  function handleOnClick() {
+    if (mode === 'github') {
+      messageRef.current = `Redirecting to Aroan's Github profile...`
+      setShowAlert(true)
+    } else if (mode === 'download-cv') {
+      messageRef.current = `Downloading Aroan's CV...`
+      setShowAlert(true)
+    }
+  }
+
   if (mode === 'download-cv') {
     return (
       <StyledWrapper>
-        <a href="/Joshua_Pamintuan_CV.pdf" download className="text-foreground flex flex-col">
+        <a
+          href="/Joshua_Pamintuan_CV.pdf"
+          onClick={handleOnClick}
+          download
+          className="text-foreground flex flex-col"
+        >
           {/* Download SVG */}
           <svg viewBox="0 0 256 256" height={32} width={32} xmlns="http://www.w3.org/2000/svg">
             <path
@@ -26,6 +41,7 @@ const StyledContactButton = ({ mode }) => {
           href="https://github.com/aroan-v"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={handleOnClick}
           className="text-foreground flex flex-col"
         >
           {/* Github SVG */}
@@ -46,13 +62,12 @@ const StyledContactButton = ({ mode }) => {
   }
 }
 
-const StyledCopyEmailButton = () => {
+const StyledCopyEmailButton = ({ setShowAlert, messageRef }) => {
   function handleCopyEmail() {
     const email = 'pamintuan.joshua@gmail.com'
 
     if (navigator?.clipboard?.writeText) {
       navigator.clipboard.writeText(email)
-      alert('Email copied to clipboard!')
     } else {
       const textArea = document.createElement('textarea')
       textArea.value = email
@@ -60,8 +75,10 @@ const StyledCopyEmailButton = () => {
       textArea.select()
       document.execCommand('copy')
       document.body.removeChild(textArea)
-      alert('Email copied (fallback)!')
     }
+
+    messageRef.current = 'Copied to clipboard successfully!'
+    setShowAlert(true)
   }
   return (
     <StyledWrapper>
@@ -73,7 +90,7 @@ const StyledCopyEmailButton = () => {
           fill="#fafafa"
           viewBox="0 0 256 256"
         >
-          <path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"></path>
+          <path d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32Zm-8,128H176V88a8,8,0,0,0-8-8H96V48H208Z"></path>
         </svg>
       </button>
     </StyledWrapper>
