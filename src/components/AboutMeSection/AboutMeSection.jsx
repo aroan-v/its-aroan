@@ -68,13 +68,14 @@ function AboutMeSection() {
           </h2>
 
           <p className="text-muted-foreground mb-6 text-sm">
-            I’m Josh (also known as Aroan), an aspiring web developer who enjoys turning ideas into
-            interactive projects. I like breaking down problems, experimenting with solutions, and
-            refining details until they click.
+            I’m Josh (also known as Aroan), an aspiring full-stack web developer who enjoys turning
+            ideas into interactive projects. I like breaking down problems, experimenting with
+            solutions, and refining details until they click.
           </p>
 
           <p className="text-muted-foreground mb-6 text-sm">
-            I graduated from <Highlight className="text-accent">Mapúa University</Highlight> with a{' '}
+            I graduated from <Highlight className="text-secondary">Mapúa University</Highlight> with
+            a{' '}
             <Highlight className="text-primary">
               BS degree in Multimedia Arts and Sciences
             </Highlight>
@@ -86,19 +87,22 @@ function AboutMeSection() {
           </p>
 
           <p className="text-muted-foreground mb-6 text-sm">
-            Two years ago, I began self-studying web development. I started with{' '}
-            <Highlight className="text-primary">HTML, CSS, and JavaScript</Highlight>, making sure I
-            had a strong foundation before moving into frameworks like{' '}
-            <Highlight className="text-accent">React</Highlight> and{' '}
-            <Highlight className="text-accent">Next.js</Highlight>.
+            Two years ago, I began transitioning to web development. My experience before this
+            includes handling websites built on drag-and-drop platforms like{' '}
+            <Highlight className="text-primary">Squarespace</Highlight> and{' '}
+            <Highlight className="text-primary">WordPress (via Elementor)</Highlight>, which gave me
+            a strong foundation in visual structure and content management. I then shifted my focus
+            to core programming, mastering{' '}
+            <Highlight className="text-primary">HTML, CSS, and JavaScript</Highlight>, before moving
+            into modern frameworks like <Highlight className="text-secondary">React</Highlight> and{' '}
+            <Highlight className="text-secondary">Next.js</Highlight>.
           </p>
 
           <p className="text-muted-foreground text-sm">
             Today, I’m working toward becoming a{' '}
-            <Highlight className="text-accent">full-stack developer</Highlight> and eventually a
-            software engineer. As I start applying for junior developer roles, I look forward to
-            growing further, learning from real-world challenges, and continuing to push my skills
-            forward one project at a time.
+            <Highlight className="text-secondary">full-stack developer</Highlight>. As I start
+            applying for junior developer roles, I look forward to growing further, learning from
+            real-world challenges, and continuing to push my skills forward one project at a time.
           </p>
         </div>
       </div>

@@ -1,11 +1,8 @@
 import React from 'react'
 
 function ContactAlert({ showAlert, messageRef }) {
-  const message = messageRef?.current || ''
+  const message = messageRef?.current || 'Success!'
 
-  if (!message) {
-    return
-  }
   return (
     <div className="h-5 w-full">
       {/* Alert */}

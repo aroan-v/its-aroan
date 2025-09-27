@@ -47,8 +47,8 @@ const ContactMeSection = () => {
   return (
     <StyledWrapper>
       {/* Header */}
-      <div className="relative w-full text-center">
-        <h2 className="text-accent font-display text-3xl font-bold md:text-4xl">
+      <div id="contact" className="relative w-full text-center">
+        <h2 className="text-secondary font-display text-3xl font-bold md:text-4xl">
           I’d love to hear from you!
         </h2>
         <p className="text-sm italic">Check out my socials or download my resume</p>

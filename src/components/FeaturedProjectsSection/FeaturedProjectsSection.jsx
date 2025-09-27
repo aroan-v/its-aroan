@@ -49,15 +49,15 @@ const highlightProjects = [
     technologies: ['Vercel', 'Tailwind CSS', 'Zustand', 'D3-Charts', 'Shadcn/UI', 'cronjob'],
     badges: [
       {
-        className: 'ds-badge-outline  ds-badge-primary',
+        className: 'ds-badge-soft  ds-badge-primary',
         items: ['Next.js'],
       },
       {
-        className: 'ds-badge-outline  ds-badge-secondary',
+        className: 'ds-badge-soft  ds-badge-secondary',
         items: ['Tailwind CSS', 'Zustand', 'D3-Charts'],
       },
       {
-        className: 'ds-badge-outline  ds-badge-accent',
+        className: 'ds-badge-soft  ds-badge-accent',
         items: ['cronjob', 'Vercel', 'Github Actions', 'Shadcn/UI'],
       },
     ],
@@ -109,27 +109,18 @@ const highlightProjects = [
       </>
     ),
 
-    technologies: [
-      'Next.js',
-      'React',
-      'Vercel',
-      'Groq',
-      'Gemma-2b',
-      'Tailwind CSS',
-      'Shadcn/UI',
-      'DaisyUI',
-    ],
+    technologies: ['Next.js', 'React', 'Groq', 'Gemma-2b', 'Tailwind CSS', 'Shadcn/UI', 'DaisyUI'],
     badges: [
       {
-        className: 'ds-badge-outline  ds-badge-primary',
+        className: 'ds-badge-soft  ds-badge-primary',
         items: ['Next.js'],
       },
       {
-        className: 'ds-badge-outline  ds-badge-secondary',
+        className: 'ds-badge-soft  ds-badge-secondary',
         items: ['Groq', 'Gemma-2b', 'Tailwind CSS', 'DaisyUI'],
       },
       {
-        className: 'ds-badge-outline  ds-badge-accent',
+        className: 'ds-badge-soft  ds-badge-accent',
         items: ['Vercel', 'Shadcn/UI'],
       },
     ],
@@ -213,15 +204,15 @@ const highlightProjects = [
     ],
     badges: [
       {
-        className: 'ds-badge-outline  ds-badge-primary',
+        className: 'ds-badge-soft  ds-badge-primary',
         items: ['Next.js'],
       },
       {
-        className: 'ds-badge-outline  ds-badge-secondary',
+        className: 'ds-badge-soft  ds-badge-secondary',
         items: ['Tailwind CSS'],
       },
       {
-        className: 'ds-badge-outline  ds-badge-accent',
+        className: 'ds-badge-soft  ds-badge-accent',
         items: ['Vercel', 'Shadcn/UI'],
       },
     ],

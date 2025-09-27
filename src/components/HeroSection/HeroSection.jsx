@@ -53,7 +53,9 @@ function HeroSection() {
         applications.
       </p>
 
-      <Button className="bg-white text-black hover:scale-105 hover:bg-white">View Projects</Button>
+      <Button asChild className="bg-white text-black hover:scale-105 hover:bg-white">
+        <a href="#projects">View Projects</a>
+      </Button>
       <HeroBackground />
     </div>
   )

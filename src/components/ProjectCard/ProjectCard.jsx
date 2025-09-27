@@ -14,7 +14,7 @@ function ProjectCard({ project }) {
       className="shadow-neutral relative flex-col rounded-xl bg-transparent pb-6 shadow-sm hover:shadow-lg"
     >
       {/* Image container */}
-      <div className="shadow-neutral relative h-80 overflow-hidden shadow-inner">
+      <div className="shadow-neutral relative h-80 overflow-hidden rounded-xl border-2 border-transparent shadow-inner">
         <Image
           src={project.image[0]}
           alt={project.images[0].alt}

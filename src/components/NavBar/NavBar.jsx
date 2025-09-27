@@ -2,37 +2,43 @@
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import { Menu, X } from 'lucide-react'
+import {
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuItem,
+  NavigationMenuLink,
+} from '@/components/ui/navigation-menu'
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
 
   const navItems = [
-    { href: '#home', label: 'Home' },
     { href: '#projects', label: 'Projects' },
-    { href: '#skills', label: 'Skills' },
+    { href: '#about', label: 'About Me' },
     { href: '#contact', label: 'Contact' },
   ]
 
   return (
-    <header className="fixed top-0 z-50 w-full bg-transparent backdrop-blur-lg">
+    <header className="fixed top-0 z-50 w-full bg-transparent backdrop-blur-2xl">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="bg-primary bg-clip-text text-xl font-bold text-transparent">
-            Portfolio
-          </div>
+          <a href="#">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/aroan-logo.svg" alt="Aroan's logo" className="h-auto w-20" />
+          </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden items-center space-x-8 md:flex">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="text-foreground hover:text-accent transition-colors duration-300"
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>
+          <NavigationMenu className="hidden md:block">
+            <NavigationMenuList className="flex space-x-8">
+              {navItems.map((item) => (
+                <NavigationMenuItem key={item.href}>
+                  <NavigationMenuLink href={item.href} className="transition-colors duration-300">
+                    {item.label}
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+              ))}
+            </NavigationMenuList>
+          </NavigationMenu>
 
           {/* Mobile Menu Button */}
           <Button
@@ -53,7 +59,7 @@ const NavBar = () => {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-foreground hover:text-accent transition-colors duration-300"
+                  className="text-foreground hover:text-accent transition-colors duration-300 text-shadow-sm"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}

@@ -10,10 +10,13 @@
 @plugin "daisyui/theme" {
   name: 'synthwave';
   default: true;
+
   --color-primary: oklch(87% 0.169 91.605);
   --color-primary-content: oklch(27% 0.077 45.635);
   --color-secondary: oklch(75% 0.183 55.934);
   --color-secondary-content: oklch(26% 0.079 36.259);
+
+  --color-base-300: oklch(24.054% 0.09356 316.532);
 
   --color-neutral: oklch(25% 0.092 26.042);
   --color-neutral-content: oklch(98% 0.002 247.839);
@@ -99,14 +102,18 @@
   --font-display: var(--font-yellowtail, ui-sans-serif, system-ui);
 }
 
+.ds-badge-soft {
+  background-color: var(--color-base-300);
+}
+
 :root {
   /* DaisyUI theme variables */
-  --color-base-100: oklch(15% 0.09 281.288);
+  --color-base-100: oklch(0% 0 0);
   --color-base-200: oklch(20% 0.09 281.288);
-  --color-base-300: oklch(25% 0.09 281.288);
+  --color-base-300: oklch(24.054% 0.09356 316.532);
   --color-base-content: oklch(100% 0.00011 271.152);
   --color-primary: oklch(87% 0.169 91.605);
-  --color-primary-content: oklch(27% 0.077 45.635);
+  --color-primary-content: oklch(10.867% 0.02416 66.147);
   --color-secondary: oklch(75% 0.183 55.934);
   --color-secondary-content: oklch(26% 0.079 36.259);
   --color-accent: oklch(60.975% 0.23342 27.791);
@@ -202,4 +209,8 @@
   --border: var(--border);
   --input: var(--color-base-300);
   --ring: var(--color-info);
+}
+
+html {
+  scroll-behavior: smooth;
 }
