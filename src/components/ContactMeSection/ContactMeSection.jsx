@@ -3,13 +3,10 @@ import { devLog } from '@/lib/logger'
 import React from 'react'
 import styled from 'styled-components'
 import { Button } from '../ui/button'
+import StyledDownloadButton from '../StyledDownloadButton'
+import StyledContactButton, { StyledCopyEmailButton } from '../StyledContactButton'
 
 const ContactMeSection = () => {
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText('yourname@email.com')
-    alert('Email copied to clipboard!')
-  }
-
   const [isShown, setIsShown] = React.useState(false)
   const wrapperRef = React.useRef()
 
@@ -48,37 +45,19 @@ const ContactMeSection = () => {
 
       {/* Cards */}
       <div className="group container w-full">
-        <div
-          data-text="Contact"
-          className={`glass transition-all ${
-            isShown ? 'mx-2 rotate-0' : '-m-[35px] -rotate-[15deg]'
-          }`}
-        >
-          <Button variant="gradient">Github Profile</Button>
+        <div className={`glass ${isShown ? 'shown' : 'hidden-left'}`}>
+          Github
+          <StyledContactButton mode="github" />
         </div>
 
-        <div
-          data-text="Download my CV"
-          className={`glass transition-all ${isShown ? 'm-2 rotate-0' : '-m-[35px] rotate-0'}`}
-        >
-          <Button
-            onClick={handleCopyEmail}
-            className="from-accent to-neutral text-neutral-content"
-            variant="gradient"
-          >
-            Download CV
-          </Button>
+        <div className={`glass ${isShown ? 'shown' : 'hidden-center'}`}>
+          Download CV
+          <StyledContactButton mode="download-cv" />
         </div>
 
-        <div
-          data-text="Github"
-          className={`glass transition-all ${
-            isShown ? 'mx-2 rotate-0' : '-m-[35px] rotate-[15deg]'
-          }`}
-        >
-          <Button onClick={handleCopyEmail} variant="gradient">
-            Copy email
-          </Button>
+        <div data-text="Github" className={`glass ${isShown ? 'shown' : 'hidden-right'}`}>
+          Copy Email
+          <StyledCopyEmailButton />
         </div>
       </div>
     </StyledWrapper>
@@ -96,41 +75,53 @@ const StyledWrapper = styled.div`
     margin-top: 25px;
   }
 
+  .container .unstyled {
+    position: relative;
+    width: 125px;
+    transition: 0.7s;
+    height: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .container .glass {
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
+    font-weight: 500;
+    font-size: 0.875rem;
+    text-align: center;
     background: linear-gradient(#fff2, transparent);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
     display: flex;
+    gap: 8px;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: 0.7s;
     border-radius: 12px;
     backdrop-filter: blur(10px);
-    /* transform: rotate(calc(var(--r) * 1deg)); */
+    transition: all 0.7s ease;
   }
 
-  /* .container:hover .glass {
-    margin: 0 10px;
-  } */
-  /* 
-  .container .glass::before {
-    content: attr(data-text);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.05);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-  } */
-  .container .glass svg {
-    font-size: 2.5em;
-    fill: #fff;
+  .glass.shown {
+    margin: 0 8px; /* mx-2 equivalent */
+    transform: rotate(0deg);
+  }
+
+  .glass.hidden-center {
+    margin: -20px;
+  }
+
+  .glass.hidden-left {
+    margin: -20px; /* -m-[35px] */
+    transform: rotate(-15deg);
+  }
+
+  .glass.hidden-right {
+    margin: -20px;
+    transform: rotate(15deg);
   }
 `
 

@@ -41,7 +41,7 @@ const StyledWrapper = styled.div`
         #880088
       )
       no-repeat;
-    background-size: 300%;
+    background-size: 00%;
     color: #fff;
     border: none;
     background-position: left center;
