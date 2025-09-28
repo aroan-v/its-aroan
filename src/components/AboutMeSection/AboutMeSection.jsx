@@ -125,7 +125,7 @@ function ProfilePhoto() {
         <div className="from-primary via-secondary to-primary relative h-full w-full rounded-3xl bg-gradient-to-br p-1 shadow-lg">
           <div className="bg-background relative h-full w-full overflow-hidden rounded-3xl">
             <Image
-              src="/profile.jpg"
+              src="/profile/profile.jpg"
               alt="Josh's picture"
               fill
               className="rounded-3xl object-cover transition-transform duration-500 group-hover:scale-105"

@@ -4,7 +4,10 @@ import React from 'react'
 import styled from 'styled-components'
 import { Button } from '../ui/button'
 import StyledDownloadButton from '../StyledDownloadButton'
-import StyledContactButton, { StyledCopyEmailButton } from '../StyledContactButton'
+import StyledContactButton, {
+  StyledCopyEmailButton,
+  StyledDownloadCVButton,
+} from '../StyledContactButton'
 import DaisyWrapper from '../DaisyWrapper'
 import RedGlassBackground from '../RedGlassBackground'
 import ContactAlert from '../ContactAlert'
@@ -66,11 +69,7 @@ const ContactMeSection = () => {
 
         <div className={`glass ${isShown ? 'shown' : 'hidden-center'}`}>
           Download CV
-          <StyledContactButton
-            mode="download-cv"
-            setShowAlert={setShowAlert}
-            messageRef={messageRef}
-          />
+          <StyledDownloadCVButton setShowAlert={setShowAlert} messageRef={messageRef} />
         </div>
 
         <div data-text="Github" className={`glass ${isShown ? 'shown' : 'hidden-right'}`}>

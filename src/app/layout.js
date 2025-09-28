@@ -36,8 +36,34 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata = {
-  title: 'My Portfolio',
-  description: 'Turning ideas into interactive projects.',
+  title: 'Aroan | Junior Next.js Developer',
+  description:
+    'Turning ideas into projects through logical problem-solving, creative experimentation, and attention to detail. Builds modern, interactive applications on strong fundamentals.',
+  openGraph: {
+    title: 'Aroan | Junior Next.js Developer',
+    description:
+      'Turning ideas into projects through logical problem-solving, creative experimentation, and attention to detail. Builds modern, interactive applications on strong fundamentals.',
+    url: 'https://its-aroan.vercel.app',
+    siteName: "Aroan's Portfolio",
+    images: [
+      {
+        url: 'https://its-aroan.vercel.app/link-preview.jpg',
+        width: 1200,
+        height: 630,
+        alt: "Aroan's Portfolio Header",
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Aroan | Junior Next.js Developer',
+    description:
+      'Turning ideas into projects through logical problem-solving, creative experimentation, and attention to detail.',
+    images: ['https://its-aroan.vercel.app/link-preview.jpg'],
+  },
+  metadataBase: new URL('https://its-aroan.vercel.app'),
 }
 
 export default function RootLayout({ children }) {
