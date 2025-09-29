@@ -8,6 +8,7 @@ import HighlightCard from '../HighlightCard'
 import Highlight from '../Highlight'
 import StyledSunsetBackground from '../StyledSunsetBackground'
 import { cn } from '@/lib/utils'
+import PaddingWrapper from '../PaddingWrapper'
 
 const highlightProjects = [
   {
@@ -303,7 +304,11 @@ const projects = [
 
 function FeaturedProjectsSection() {
   return (
-    <section id="projects" className="relative mx-auto mt-10 w-full space-y-8 py-20">
+    <PaddingWrapper
+      as="section"
+      id="projects"
+      className="relative mx-auto mt-10 w-full space-y-8 py-20"
+    >
       <div className="mx-auto mb-16 max-w-2xl px-8 text-center">
         <h2 className="mb-4 text-4xl font-bold md:text-5xl">
           <span className="text-foreground text-shadow-md">Featured Projects</span>
@@ -326,7 +331,7 @@ function FeaturedProjectsSection() {
         ))}
       </div>
       <StyledSunsetBackground />
-    </section>
+    </PaddingWrapper>
   )
 }
 
