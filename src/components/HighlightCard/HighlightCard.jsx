@@ -1,14 +1,10 @@
 import React from 'react'
 import { Card, CardAction, CardContent, CardTitle } from '../ui/card'
-import { Button } from '../ui/button'
-import { ExternalLink, Github } from 'lucide-react'
 import Image from 'next/image'
 import DaisyWrapper from '../DaisyWrapper'
 import { devLog } from '@/lib/logger'
-import StyledCardBackground from '../StyledCardBackground'
 import GlassBackground from '../GlassBackground'
 import RedGlassBackground from '../RedGlassBackground'
-import StyledTag from '../StyledTag'
 import StyledAnchor from '../StyledAnchor'
 
 function HighlightCard({ project, index }) {

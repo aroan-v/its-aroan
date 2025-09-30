@@ -2,14 +2,10 @@
 import { devLog } from '@/lib/logger'
 import React from 'react'
 import styled from 'styled-components'
-import { Button } from '../ui/button'
-import StyledDownloadButton from '../StyledDownloadButton'
 import StyledContactButton, {
   StyledCopyEmailButton,
   StyledDownloadCVButton,
 } from '../StyledContactButton'
-import DaisyWrapper from '../DaisyWrapper'
-import RedGlassBackground from '../RedGlassBackground'
 import ContactAlert from '../ContactAlert'
 
 const ContactMeSection = () => {
@@ -61,7 +57,7 @@ const ContactMeSection = () => {
       </div>
 
       {/* Cards */}
-      <div className="group styledContainer w-full">
+      <div className="group styledContainer flex w-full items-center justify-center">
         <div className={`glass ${isShown ? 'shown' : 'hidden-left'}`}>
           Github
           <StyledContactButton mode="github" setShowAlert={setShowAlert} messageRef={messageRef} />
@@ -90,12 +86,6 @@ const StyledWrapper = styled.div`
 
   & > * + * {
     margin-top: 0.8rem;
-  }
-
-  .styledContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .styledContainer .unstyled {

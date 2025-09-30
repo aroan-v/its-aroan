@@ -1,5 +1,4 @@
 'use client'
-import { Sunset } from 'lucide-react'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -41,7 +40,7 @@ export const SunsetBackgroundBottom = styled.div`
 
   /* Background gradient with smooth blending */
   background: radial-gradient(
-    102.07% 102.07% at 51.11% 1.13%,
+    122.07% 102.07% at 51.11% 11.13%,
     rgba(0, 0, 0, 0) 0%,
     #000000 47.36%,
     #d30104 78.29%,

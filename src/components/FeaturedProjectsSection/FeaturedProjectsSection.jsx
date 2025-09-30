@@ -1,13 +1,8 @@
 import React from 'react'
-import { Card } from '../ui/card'
-import { Button } from '../ui/button'
-import { ExternalLink, Github } from 'lucide-react'
-import Image from 'next/image'
 import ProjectCard from '../ProjectCard'
 import HighlightCard from '../HighlightCard'
 import Highlight from '../Highlight'
 import StyledSunsetBackground from '../StyledSunsetBackground'
-import { cn } from '@/lib/utils'
 import PaddingWrapper from '../PaddingWrapper'
 
 const highlightProjects = [
@@ -307,7 +302,7 @@ function FeaturedProjectsSection() {
     <PaddingWrapper
       as="section"
       id="projects"
-      className="relative mx-auto my-10 w-full space-y-8 py-20"
+      className="relative mx-auto my-10 w-full scroll-mt-60 space-y-8 py-20"
     >
       <div className="mx-auto mb-16 max-w-2xl px-8 text-center">
         <h2 className="mb-4 text-4xl font-bold md:text-5xl">

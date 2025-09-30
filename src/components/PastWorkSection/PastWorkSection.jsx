@@ -3,13 +3,14 @@ import PaddingWrapper from '../PaddingWrapper'
 import { pastWorkContent } from '@/data/pastWorksContent'
 import Image from 'next/image'
 import { BlackGlassBackground } from '../RedGlassBackground'
+import StyledGradientGlowBackground from '../StyledGradientGlowBackground'
 
 function PastWorkSection() {
   return (
     <PaddingWrapper
       as="section"
-      id="projects"
-      className="relative mb-30 flex min-w-screen flex-col items-center gap-8 overflow-x-clip"
+      id="creative-footprint"
+      className="relative mb-30 flex min-w-screen scroll-mt-40 flex-col items-center gap-8 overflow-x-clip"
     >
       {/* Heading */}
       <div className="max-w-5xl px-8 text-center">
@@ -50,20 +51,8 @@ function PastWorkSection() {
         </div>
       ))}
 
-      {/* <div className="relative">
-        <StyledGradientGlowBackground>Test</StyledGradientGlowBackground>
-      </div> */}
-
-      {/* Image bg */}
-      <div className="absolute -top-[5%] left-1/2 -z-31 aspect-square w-full -translate-x-1/2">
-        <Image
-          className="rotate-30"
-          src="/past-work-bg.png"
-          alt="Past work gradient background"
-          fill
-          sizes="100vw"
-        />
-      </div>
+      {/* Gradient Background */}
+      <StyledGradientGlowBackground />
     </PaddingWrapper>
   )
 }

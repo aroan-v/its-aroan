@@ -14,6 +14,7 @@ const NavBar = () => {
 
   const navItems = [
     { href: '#projects', label: 'Projects' },
+    { href: '#creative-footprint', label: 'Creative Footprint' },
     { href: '#about', label: 'About Me' },
     { href: '#contact', label: 'Contact' },
   ]

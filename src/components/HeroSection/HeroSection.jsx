@@ -1,9 +1,6 @@
 'use client'
 import React from 'react'
-import DaisyWrapper from '../DaisyWrapper'
-import NightContainer from '../NightContainer'
 import styled from 'styled-components'
-import Image from 'next/image'
 import { Button } from '../ui/button'
 
 export const HeroBackground = styled.div`

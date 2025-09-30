@@ -1,12 +1,10 @@
 import React from 'react'
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
 import DaisyWrapper from '../DaisyWrapper'
-import SkillsSection from '../SkillsSection'
 import PaddingWrapper from '../PaddingWrapper'
 import Highlight from '../Highlight'
 import Image from 'next/image'
-import { SunsetBackgroundBottom } from '../StyledSunsetBackground'
 import ContactMeSection from '../ContactMeSection'
+import { StyledSunsetBackgroundBottom } from '../StyledSunsetBackground'
 
 const stats = [
   {
@@ -30,7 +28,7 @@ const stats = [
 
 function AboutMeSection() {
   return (
-    <PaddingWrapper as="section" id="about" className="relative w-full pb-30">
+    <PaddingWrapper as="section" id="about" className="relative w-full scroll-mt-40 pb-30">
       <div className="mx-auto grid max-w-5xl items-start gap-12 lg:grid-cols-2">
         <div className="my-auto space-y-8">
           {/* Image */}
@@ -68,9 +66,7 @@ function AboutMeSection() {
           </h2>
 
           <p className="text-muted-foreground mb-6 text-sm">
-            I’m Josh (also known as Aroan), an aspiring full-stack web developer who enjoys turning
-            ideas into interactive projects. I like breaking down problems, experimenting with
-            solutions, and refining details until they click.
+            {`I’m Josh, though I design and build under the brand name Aroan—an identity I crafted from my second name. I’m an aspiring full-stack web developer who enjoys turning ideas into interactive projects. I like breaking down problems, experimenting with solutions, and refining details until they click.`}
           </p>
 
           <p className="text-muted-foreground mb-6 text-sm">
@@ -111,7 +107,7 @@ function AboutMeSection() {
       <ContactMeSection />
 
       {/* Background */}
-      <SunsetBackgroundBottom />
+      <StyledSunsetBackgroundBottom />
     </PaddingWrapper>
   )
 }

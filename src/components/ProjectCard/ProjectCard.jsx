@@ -1,7 +1,5 @@
 import React from 'react'
 import { Card, CardAction, CardContent } from '../ui/card'
-import { Button } from '../ui/button'
-import { ExternalLink, Github } from 'lucide-react'
 import Image from 'next/image'
 import DaisyWrapper from '../DaisyWrapper'
 import RedGlassBackground from '../RedGlassBackground'
