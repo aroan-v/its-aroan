@@ -24,7 +24,7 @@ const StyledGlass = styled.div`
     content: '';
     position: absolute;
     inset: 0;
-    background-color: rgb(0, 0, 0); /* gray-700 */
+    background-color: rgb(0, 0, 0);
   }
 
   /* glass effect ON TOP of the gray */

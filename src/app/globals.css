@@ -100,6 +100,19 @@
 
   --font-sans: var(--font-poppins, ui-sans-serif, system-ui, sans-serif);
   --font-display: var(--font-yellowtail, ui-sans-serif, system-ui);
+  --animate-aurora: aurora 60s linear infinite;
+  @keyframes aurora {
+    from {
+      backgroundposition:
+        50% 50%,
+        50% 50%;
+    }
+    to {
+      backgroundposition:
+        350% 50%,
+        350% 50%;
+    }
+  }
 }
 
 .ds-badge-soft {
@@ -213,4 +226,16 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+/* 
+---break--- */
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }

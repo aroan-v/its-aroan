@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono, Poppins, Pacifico, Yellowtail } from 'next/font/google'
 import './globals.css'
+import { Analytics } from '@vercel/analytics/next'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -72,7 +73,11 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${poppins.variable} ${pacifico.variable} ${yellowtail.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
     >
-      <body className="dark bg-black pb-10 font-sans">{children}</body>
+      <body className="dark bg-black pb-10 font-sans">
+        {children}
+
+        <Analytics />
+      </body>
     </html>
   )
 }

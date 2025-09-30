@@ -50,8 +50,29 @@ export const pastWorkContent = [
     ],
   },
   {
+    category: 'Partners',
+    title: `Partners I've Directly Worked With`,
+    description: '',
+    entities: [
+      { name: 'ADB', alt: 'ADB logo', src: '/past-work-logos/partners/adb-logo.png' },
+      { name: 'Cartier', alt: 'Cartier logo', src: '/past-work-logos/partners/cartier-logo.png' },
+      { name: 'COMELEC', alt: 'COMELEC logo', src: '/past-work-logos/partners/comelec-logo.png' },
+      { name: 'KMC', alt: 'KMC logo', src: '/past-work-logos/partners/kmc-logo.png' },
+      { name: 'SATO', alt: 'SATO logo', src: '/past-work-logos/partners/sato-logo.png' },
+      { name: 'Pasay', alt: 'Pasay City logo', src: '/past-work-logos/ripplex/pasay-logo.png' },
+      { name: 'Pasig', alt: 'Pasig City logo', src: '/past-work-logos/ripplex/pasig-logo.png' },
+      { name: 'Quezon City', alt: 'Quezon City logo', src: '/past-work-logos/ripplex/qc-logo.png' },
+      { name: 'Quimbo', alt: 'Quimbo logo', src: '/past-work-logos/ripplex/quimbo-logo.png' },
+      {
+        name: 'San Juan City',
+        alt: 'San Juan City logo',
+        src: '/past-work-logos/ripplex/san-juan-logo.png',
+      },
+    ],
+  },
+  {
     category: 'Vote Pilipinas',
-    title: `Programs I've Directly Handled in Vote Pilipinas`,
+    title: `Creative Campaigns I Led for Vote Pilipinas`,
     description: '',
     entities: [
       {
@@ -112,7 +133,7 @@ export const pastWorkContent = [
   },
   {
     category: 'Impact Hub Programs and Events',
-    title: '',
+    title: `Programs, Projects, and Events I've Managed`,
     description: '',
     entities: [
       {
@@ -138,12 +159,12 @@ export const pastWorkContent = [
       {
         name: 'Elevate Regional Startup Roadshow',
         alt: 'Elevate Regional Startup Roadshow logo',
-        src: '/past-work-logos/programs/elevate-logo-png',
+        src: '/past-work-logos/programs/elevate-logo.png',
       },
       {
         name: 'Elevate Training Program',
         alt: 'Elevate Training Program logo',
-        src: '/past-work-logos/programs/eleveate-training-program-logo.png',
+        src: '/past-work-logos/programs/elevate-training-program-logo.png',
       },
       {
         name: 'FuckUp Nights',
@@ -199,34 +220,6 @@ export const pastWorkContent = [
         alt: 'Women Now logo',
         src: '/past-work-logos/programs/women-now-logo.png',
       },
-    ],
-  },
-  {
-    category: 'RippleX',
-    title: '',
-    description: '',
-    entities: [
-      { name: 'Pasay', alt: 'Pasay City logo', src: '/past-work-logos/ripplex/pasay-logo.png' },
-      { name: 'Pasig', alt: 'Pasig City logo', src: '/past-work-logos/ripplex/pasig-logo.png' },
-      { name: 'Quezon City', alt: 'Quezon City logo', src: '/past-work-logos/ripplex/qc-logo.png' },
-      { name: 'Quimbo', alt: 'Quimbo logo', src: '/past-work-logos/ripplex/quimbo-logo.png' },
-      {
-        name: 'San Juan City',
-        alt: 'San Juan City logo',
-        src: '/past-work-logos/ripplex/san-juan-logo.png',
-      },
-    ],
-  },
-  {
-    category: 'Partners',
-    title: '',
-    description: '',
-    entities: [
-      { name: 'ADB', alt: 'ADB logo', src: '/past-work-logos/partners/adb-logo.png' },
-      { name: 'Cartier', alt: 'Cartier logo', src: '/past-work-logos/partners/cartier-logo.png' },
-      { name: 'COMELEC', alt: 'COMELEC logo', src: '/past-work-logos/partners/comelec-logo.png' },
-      { name: 'KMC', alt: 'KMC logo', src: '/past-work-logos/partners/kmc-logo.png' },
-      { name: 'SATO', alt: 'SATO logo', src: '/past-work-logos/partners/sato-logo.png' },
     ],
   },
 ]

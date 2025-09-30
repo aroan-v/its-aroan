@@ -56,6 +56,8 @@ function HeroSection() {
       <Button asChild className="bg-white text-black hover:scale-105 hover:bg-white">
         <a href="#projects">View Projects</a>
       </Button>
+
+      {/* Background */}
       <HeroBackground />
     </div>
   )

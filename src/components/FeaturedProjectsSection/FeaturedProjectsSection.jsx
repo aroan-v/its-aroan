@@ -307,7 +307,7 @@ function FeaturedProjectsSection() {
     <PaddingWrapper
       as="section"
       id="projects"
-      className="relative mx-auto mt-10 w-full space-y-8 py-20"
+      className="relative mx-auto my-10 w-full space-y-8 py-20"
     >
       <div className="mx-auto mb-16 max-w-2xl px-8 text-center">
         <h2 className="mb-4 text-4xl font-bold md:text-5xl">
@@ -319,13 +319,13 @@ function FeaturedProjectsSection() {
         </p>
       </div>
 
-      <div className="mx-auto max-w-6xl space-y-8 px-8">
+      <div className="mx-auto max-w-6xl space-y-8">
         {highlightProjects.map((project, index) => (
           <HighlightCard key={index} index={index} project={project} />
         ))}
       </div>
 
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}
