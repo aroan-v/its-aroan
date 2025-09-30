@@ -7,6 +7,97 @@ import PaddingWrapper from '../PaddingWrapper'
 
 const highlightProjects = [
   {
+    id: 3,
+    title: 'Nylon Vote Page',
+    logoSrc: '/project-logos/vote-page.jpg',
+    alt: 'Logo for Nylon Vote Page project',
+    description: (
+      <>
+        <p>
+          This project started during a fandom vote competition where our team was falling behind.
+          The gap was widening, and to make things worse, participation from our fandom was low. The
+          few of us who were still voting felt like our efforts weren’t moving the needle. That’s
+          when I began thinking:{' '}
+          <span className="italic">
+            {`"How can I make voting easier and more motivating for the ones still in the fight?"`}
+          </span>
+        </p>
+
+        <p>
+          {'My first idea was '}
+          <Highlight className="text-secondary font-bold">efficiency</Highlight>
+          {
+            '. I dug into the host poll’s script, rooted it out, and re-injected it into my own page. Then I made five iframe copies of it, so voters could cast multiple votes faster across different browsers and devices. To prevent issues, I also figured out what triggered the '
+          }
+          <span className="italic">rate limits</span>
+          {' and added instructions so voters could avoid getting blocked.'}
+        </p>
+
+        <p>
+          {'The second idea was '}
+          <Highlight className="text-secondary font-bold">morale</Highlight>
+          {
+            '. I built a votes sent tracker that counted every successful vote through the server’s response and stored the number in local storage. This way, each voter could see their personal total across sessions — a number they could proudly share with the group.'
+          }
+        </p>
+
+        <p>
+          I also added a live gap counter that refreshed every 3 seconds, plus a redesigned results
+          page that was far more engaging than the dull original.
+        </p>
+
+        <p>
+          {'In the end, the project hit its two goals: it '}
+          <Highlight className="text-secondary font-bold">empowered voters</Highlight>
+          {' by giving them a clear count of their contributions, and it '}
+          <Highlight className="text-secondary font-bold">made voting less boring</Highlight>
+          {' by turning it into a more interactive and motivating experience.'}
+        </p>
+
+        <p>
+          We didn’t win the competition — we finished in second place — but morale was high. Voters
+          could finally see and celebrate how much they had contributed, and that made the whole
+          experience worth it.
+        </p>
+      </>
+    ),
+
+    technologies: [
+      'Next.js',
+      'React',
+      'Vercel',
+      'Groq',
+      'Gemma-2b',
+      'Tailwind CSS',
+      'Shadcn/UI',
+      'DaisyUI',
+    ],
+    badges: [
+      {
+        className: 'ds-badge-soft  ds-badge-primary',
+        items: ['Next.js'],
+      },
+      {
+        className: 'ds-badge-soft  ds-badge-secondary',
+        items: ['Tailwind CSS'],
+      },
+      {
+        className: 'ds-badge-soft  ds-badge-accent',
+        items: ['Vercel', 'Shadcn/UI'],
+      },
+    ],
+    images: {
+      desktop: '/projects/vote-page-desktop.png',
+      mobile: '/projects/vote-page-mobile.png',
+    },
+    altImages: {
+      desktop: 'Mac mockup of the Vote Page project.',
+      mobile: 'Android phone mockup of the Vote Page project.',
+    },
+    liveUrl: 'https://project-p5lze.vercel.app',
+    githubUrl: 'https://github.com/aroan-v/nylon-vote-page',
+  },
+  {
     id: 1,
     title: 'Vote Dashboard',
     logoSrc: '/project-logos/vote-dashboard.jpg',
@@ -131,97 +222,6 @@ const highlightProjects = [
     },
     liveUrl: 'https://ai-macro-calculator.vercel.app',
     githubUrl: 'https://github.com/aroan-v/forge-app',
-  },
-  {
-    id: 3,
-    title: 'Nylon Vote Page',
-    logoSrc: '/project-logos/vote-page.jpg',
-    alt: 'Logo for Nylon Vote Page project',
-    description: (
-      <>
-        <p>
-          This project started during a fandom vote competition where our team was falling behind.
-          The gap was widening, and to make things worse, participation from our fandom was low. The
-          few of us who were still voting felt like our efforts weren’t moving the needle. That’s
-          when I began thinking:{' '}
-          <span className="italic">
-            {`"How can I make voting easier and more motivating for the ones still in the fight?"`}
-          </span>
-        </p>
-
-        <p>
-          {'My first idea was '}
-          <Highlight className="text-secondary font-bold">efficiency</Highlight>
-          {
-            '. I dug into the host poll’s script, rooted it out, and re-injected it into my own page. Then I made five iframe copies of it, so voters could cast multiple votes faster across different browsers and devices. To prevent issues, I also figured out what triggered the '
-          }
-          <span className="italic">rate limits</span>
-          {' and added instructions so voters could avoid getting blocked.'}
-        </p>
-
-        <p>
-          {'The second idea was '}
-          <Highlight className="text-secondary font-bold">morale</Highlight>
-          {
-            '. I built a votes sent tracker that counted every successful vote through the server’s response and stored the number in local storage. This way, each voter could see their personal total across sessions — a number they could proudly share with the group.'
-          }
-        </p>
-
-        <p>
-          I also added a live gap counter that refreshed every 3 seconds, plus a redesigned results
-          page that was far more engaging than the dull original.
-        </p>
-
-        <p>
-          {'In the end, the project hit its two goals: it '}
-          <Highlight className="text-secondary font-bold">empowered voters</Highlight>
-          {' by giving them a clear count of their contributions, and it '}
-          <Highlight className="text-secondary font-bold">made voting less boring</Highlight>
-          {' by turning it into a more interactive and motivating experience.'}
-        </p>
-
-        <p>
-          We didn’t win the competition — we finished in second place — but morale was high. Voters
-          could finally see and celebrate how much they had contributed, and that made the whole
-          experience worth it.
-        </p>
-      </>
-    ),
-
-    technologies: [
-      'Next.js',
-      'React',
-      'Vercel',
-      'Groq',
-      'Gemma-2b',
-      'Tailwind CSS',
-      'Shadcn/UI',
-      'DaisyUI',
-    ],
-    badges: [
-      {
-        className: 'ds-badge-soft  ds-badge-primary',
-        items: ['Next.js'],
-      },
-      {
-        className: 'ds-badge-soft  ds-badge-secondary',
-        items: ['Tailwind CSS'],
-      },
-      {
-        className: 'ds-badge-soft  ds-badge-accent',
-        items: ['Vercel', 'Shadcn/UI'],
-      },
-    ],
-    images: {
-      desktop: '/projects/vote-page-desktop.png',
-      mobile: '/projects/vote-page-mobile.png',
-    },
-    altImages: {
-      desktop: 'Mac mockup of the Vote Page project.',
-      mobile: 'Android phone mockup of the Vote Page project.',
-    },
-    liveUrl: 'https://project-p5lze.vercel.app',
-    githubUrl: 'https://github.com/aroan-v/nylon-vote-page',
   },
 ]
 
