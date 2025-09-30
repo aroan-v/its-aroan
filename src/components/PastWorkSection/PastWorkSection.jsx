@@ -9,7 +9,7 @@ function PastWorkSection() {
     <PaddingWrapper
       as="section"
       id="projects"
-      className="relative mb-10 flex min-w-screen flex-col items-center gap-8 overflow-x-clip"
+      className="relative mb-30 flex min-w-screen flex-col items-center gap-8 overflow-x-clip"
     >
       {/* Heading */}
       <div className="max-w-5xl px-8 text-center">
@@ -26,8 +26,10 @@ function PastWorkSection() {
       {/* Logo Container */}
       {pastWorkContent.map((obj, index) => (
         <div key={index} className="relative w-full max-w-2xl p-3 pt-6">
-          <div className="text-md mx-auto text-center font-bold text-wrap text-shadow-md">
-            {obj.title}
+          {/* Header */}
+          <div className="mx-auto w-[80%] pb-3 text-center text-wrap text-shadow-md">
+            <div className="text-md font-bold">{obj.title}</div>
+            <p className="text-sm leading-tight">{obj.description}</p>
           </div>
 
           {/* Logo container */}
@@ -47,6 +49,10 @@ function PastWorkSection() {
           {/* <GrayGlassBackground /> */}
         </div>
       ))}
+
+      {/* <div className="relative">
+        <StyledGradientGlowBackground>Test</StyledGradientGlowBackground>
+      </div> */}
 
       {/* Image bg */}
       <div className="absolute -top-[5%] left-1/2 -z-31 aspect-square w-full -translate-x-1/2">

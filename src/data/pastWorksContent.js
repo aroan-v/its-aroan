@@ -1,3 +1,4 @@
+// Schema
 export const Organizations = [
   {
     category: 'official affiliation',
@@ -18,8 +19,8 @@ export const Organizations = [
 export const pastWorkContent = [
   {
     category: 'Main',
-    title: `Companies I've worked under`,
-    description: '',
+    title: `Where I've Worked`,
+    description: 'Teams I was part of, where I led creative and digital projects.',
     entities: [
       {
         name: 'Impact Hub Manila',
@@ -52,28 +53,33 @@ export const pastWorkContent = [
   {
     category: 'Partners',
     title: `Partners I've Directly Worked With`,
-    description: '',
+    description: 'Collaborations where I worked closely with partners as the creatives lead.',
     entities: [
-      { name: 'ADB', alt: 'ADB logo', src: '/past-work-logos/partners/adb-logo.png' },
-      { name: 'Cartier', alt: 'Cartier logo', src: '/past-work-logos/partners/cartier-logo.png' },
       { name: 'COMELEC', alt: 'COMELEC logo', src: '/past-work-logos/partners/comelec-logo.png' },
-      { name: 'KMC', alt: 'KMC logo', src: '/past-work-logos/partners/kmc-logo.png' },
+      { name: 'ADB', alt: 'ADB logo', src: '/past-work-logos/partners/adb-logo.png' },
       { name: 'SATO', alt: 'SATO logo', src: '/past-work-logos/partners/sato-logo.png' },
-      { name: 'Pasay', alt: 'Pasay City logo', src: '/past-work-logos/ripplex/pasay-logo.png' },
-      { name: 'Pasig', alt: 'Pasig City logo', src: '/past-work-logos/ripplex/pasig-logo.png' },
+      { name: 'Cartier', alt: 'Cartier logo', src: '/past-work-logos/partners/cartier-logo.png' },
+      { name: 'KMC', alt: 'KMC logo', src: '/past-work-logos/partners/kmc-logo.png' },
       { name: 'Quezon City', alt: 'Quezon City logo', src: '/past-work-logos/ripplex/qc-logo.png' },
       { name: 'Quimbo', alt: 'Quimbo logo', src: '/past-work-logos/ripplex/quimbo-logo.png' },
+      { name: 'Pasay', alt: 'Pasay City logo', src: '/past-work-logos/ripplex/pasay-logo.png' },
+      { name: 'Pasig', alt: 'Pasig City logo', src: '/past-work-logos/ripplex/pasig-logo.png' },
       {
         name: 'San Juan City',
         alt: 'San Juan City logo',
         src: '/past-work-logos/ripplex/san-juan-logo.png',
       },
+      {
+        name: 'Greenpeace',
+        alt: 'Greenpeace logo',
+        src: '/past-work-logos/ripplex/greenpeace-logo.png',
+      },
     ],
   },
   {
     category: 'Vote Pilipinas',
-    title: `Creative Campaigns I Led for Vote Pilipinas`,
-    description: '',
+    title: `Creative Campaigns for Vote Pilipinas`,
+    description: 'Campaigns I designed and managed end-to-end, from concepts to execution.',
     entities: [
       {
         name: 'Pilipinas Debates 2022: The Turning Point',
@@ -96,8 +102,8 @@ export const pastWorkContent = [
   },
   {
     category: 'Asia Pacific Programs',
-    title: `Programs I've directly handled in Impact Hub Asia Pacific Hubs`,
-    description: '',
+    title: `Regional Programs with Impact Hub Asia Pacific`,
+    description: 'Initiatives I managed across APAC hubs, driving creative and digital strategies.',
     entities: [
       {
         name: 'Accelerate 2030',
@@ -124,37 +130,53 @@ export const pastWorkContent = [
         alt: 'Humans of Impact logo',
         src: '/past-work-logos/apac/hoi-logo.png',
       },
-      {
-        name: 'MB Youth Talks',
-        alt: 'MB Youth Talks logo',
-        src: '/past-work-logos/apac/mb-youth-logo.png',
-      },
     ],
   },
   {
-    category: 'Impact Hub Programs and Events',
+    category: 'Impact Hub Highlights',
     title: `Programs, Projects, and Events I've Managed`,
-    description: '',
+    description:
+      'A selection of key programs and events I managed—just a glimpse of the many projects I was part of.',
     entities: [
+      {
+        name: 'Impact Hackathon',
+        alt: 'Impact Hackathon logo',
+        src: '/past-work-logos/programs/impact-hackathon-logo.png',
+      },
+      {
+        name: 'Impact Hackathon 2020',
+        alt: 'Impact Hackathon 2020 logo',
+        src: '/past-work-logos/programs/hackathon-2020-logo.png',
+      },
+      {
+        name: 'Impact Hackathon 2021',
+        alt: 'Impact Hackathon 2021 logo',
+        src: '/past-work-logos/programs/hackathon-2021-logo.png',
+      },
+      {
+        name: 'Impact Hackathon 2022',
+        alt: 'Impact Hackathon 2022 logo',
+        src: '/past-work-logos/programs/hackathon-2022-logo.png',
+      },
+      {
+        name: 'DigitalXADB',
+        alt: 'DigitalXADB logo',
+        src: '/past-work-logos/programs/digital-x-adb-logo.png',
+      },
+      {
+        name: 'Impact2050',
+        alt: 'Impact2050 logo',
+        src: '/past-work-logos/programs/impact2050-logo.png',
+      },
       {
         name: '2050 Fest',
         alt: '2050 Fest logo',
         src: '/past-work-logos/programs/2050fest-logo.png',
       },
       {
-        name: 'Artisans & Makers',
-        alt: 'Artisans & Makers logo',
-        src: '/past-work-logos/programs/artisans-logo.png',
-      },
-      {
         name: `Cartier Women's Initiative`,
         alt: `Cartier Women's Initiative logo`,
         src: '/past-work-logos/programs/cartier-women-logo.png',
-      },
-      {
-        name: 'DigitalXADB',
-        alt: 'DigitalXADB logo',
-        src: '/past-work-logos/programs/digital-x-adb-logo.png',
       },
       {
         name: 'Elevate Regional Startup Roadshow',
@@ -172,30 +194,9 @@ export const pastWorkContent = [
         src: '/past-work-logos/programs/fun-logo.png',
       },
       {
-        name: 'Impact Hackathon 2020',
-        alt: 'Impact Hackathon 2020 logo',
-        src: '/past-work-logos/programs/hackathon-2020-logo.png',
-      },
-      {
-        name: 'Impact Hackathon 2021',
-        alt: 'Impact Hackathon 2021 logo',
-        src: '/past-work-logos/programs/hackathon-2021-logo.png',
-      },
-      {
-        name: 'Impact Hackathon 2022',
-        alt: 'Impact Hackathon 2022 logo',
-        src: '/past-work-logos/programs/hackathon-2022-logo.png',
-      },
-      { name: 'ICE Hub', alt: 'ICE Hub logo', src: '/past-work-logos/programs/ice-hub-logo.png' },
-      {
-        name: 'Impact Hackathon',
-        alt: 'Impact Hackathon logo',
-        src: '/past-work-logos/programs/impact-hackathon-logo.png',
-      },
-      {
-        name: 'Impact2050',
-        alt: 'Impact2050 logo',
-        src: '/past-work-logos/programs/impact2050-logo.png',
+        name: 'MB Youth Talks',
+        alt: 'MB Youth Talks logo',
+        src: '/past-work-logos/apac/mb-youth-logo.png',
       },
       {
         name: 'Incubate',
