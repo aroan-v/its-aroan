@@ -61,10 +61,6 @@
   --noise: 0;
 } */
 
-/* .ds-label {
-  @apply text-white;
-} */
-
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -101,6 +97,7 @@
   --font-sans: var(--font-poppins, ui-sans-serif, system-ui, sans-serif);
   --font-display: var(--font-yellowtail, ui-sans-serif, system-ui);
   --animate-aurora: aurora 60s linear infinite;
+
   @keyframes aurora {
     from {
       backgroundposition:
@@ -237,5 +234,23 @@ html {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  @keyframes short-bounce {
+    0%,
+    100% {
+      transform: translateY(-20%); /* small lift */
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1); /* easing for down */
+    }
+    50% {
+      transform: translateY(0); /* back to rest */
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1); /* easing for up */
+    }
+  }
+
+  .animate-short-bounce {
+    animation: short-bounce 2s infinite; /* faster & smaller than default */
   }
 }

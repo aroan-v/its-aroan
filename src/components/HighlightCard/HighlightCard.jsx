@@ -10,14 +10,14 @@ import StyledAnchor from '../StyledAnchor'
 function HighlightCard({ project, index }) {
   devLog('project', project)
 
-  const cardClasses = `bg-transparent  group relative backdrop-blur-3xl shadow-sm hover:shadow-lg  overflow-hidden lg:flex ${
+  const cardClasses = `bg-transparent  group relative backdrop-blur-3xl rounded-4xl shadow-sm hover:shadow-lg  overflow-hidden lg:flex ${
     index % 2 === 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'
   }`
 
   return (
     <Card key={project.id} className={cardClasses}>
       {/* Image */}
-      <div className="relative aspect-video w-full flex-shrink-0 overflow-hidden rounded-xl border-2 border-transparent lg:m-10 lg:h-auto lg:w-80 lg:bg-transparent">
+      <div className="relative aspect-video w-full flex-shrink-0 overflow-hidden border-2 border-transparent lg:m-10 lg:h-auto lg:w-80 lg:bg-transparent">
         {/* Desktop Image */}
         {project.images?.desktop && (
           <Image

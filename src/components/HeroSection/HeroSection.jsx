@@ -2,6 +2,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Button } from '../ui/button'
+import { ChevronsDown } from 'lucide-react'
 
 export const HeroBackground = styled.div`
   position: absolute;
@@ -11,7 +12,6 @@ export const HeroBackground = styled.div`
   transform: translateX(-50%);
   height: 95%;
 
-  /* Background gradient with smooth blending */
   background: radial-gradient(
     102.07% 102.07% at 51.11% 1.13%,
     rgba(0, 0, 0, 0) 0%,
@@ -50,8 +50,16 @@ function HeroSection() {
         applications.
       </p>
 
-      <Button asChild className="bg-white text-black hover:scale-105 hover:bg-white">
-        <a href="#projects">View Projects</a>
+      <Button
+        variant="ghost"
+        asChild
+        className="animate-short-bounce text-white hover:scale-105 hover:bg-white"
+      >
+        <span>
+          <ChevronsDown />
+          <a href="#projects">View Projects</a>
+          <ChevronsDown />
+        </span>
       </Button>
 
       {/* Background */}

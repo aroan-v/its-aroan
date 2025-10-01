@@ -98,69 +98,6 @@ const highlightProjects = [
     githubUrl: 'https://github.com/aroan-v/nylon-vote-page',
   },
   {
-    id: 1,
-    title: 'Vote Dashboard',
-    logoSrc: '/project-logos/vote-dashboard.jpg',
-    alt: 'Logo for the Vote Dashboard project',
-    // Assuming 'Highlight' is available in scope
-    description: (
-      <>
-        <p>
-          Fans will do anything to support their favorite artists—even lose sleep to vote in online
-          polls and awards shows. I saw this when I joined the effort to vote for Will Ashley, who
-          was nominated for Nylon’s Boldest Breakout Star.
-        </p>
-        <p>
-          {
-            "To make the voting more interesting, and to bring out the fandom's competitive side, I created an interactive vote tracker. It was a visual tool designed to reimagine the typically boring, straightforward poll result. Inspired by the dynamic and engaging vote displays of MTV EMAs and MTV Hottest, I built a system that showcased the results with a unique visual flair."
-          }
-        </p>
-
-        <p>
-          {'Using '}
-          <Highlight className="text-secondary font-bold">cron-job.org</Highlight>
-          {' and '}
-          <Highlight className="text-secondary font-bold">GitHub Actions</Highlight>
-          {
-            ', I took a snapshot of the vote standings every five minutes, from August 19 to September 1. This real-time data was fed directly into the dashboard, allowing us to see our progress in an exciting new way.'
-          }
-        </p>
-
-        <p>
-          We used the data to figure out our strategy, and even though we only made it to second
-          place, the whole thing proved to me how technology can rally a fandom and make even a
-          simple online poll feel like a true team effort.
-        </p>
-      </>
-    ),
-    technologies: ['Vercel', 'Tailwind CSS', 'Zustand', 'D3-Charts', 'Shadcn/UI', 'cronjob'],
-    badges: [
-      {
-        className: 'ds-badge-soft  ds-badge-primary',
-        items: ['Next.js'],
-      },
-      {
-        className: 'ds-badge-soft  ds-badge-secondary',
-        items: ['Tailwind CSS', 'Zustand', 'D3-Charts'],
-      },
-      {
-        className: 'ds-badge-soft  ds-badge-accent',
-        items: ['cronjob', 'Vercel', 'Github Actions', 'Shadcn/UI'],
-      },
-    ],
-    image: ['/projects/vote-dashboard.jpg'],
-    images: {
-      desktop: '/projects/dashboard-desktop.png',
-      mobile: '/projects/dashboard-mobile.png',
-    },
-    altImages: {
-      desktop: 'Ipad mockup of the Vote Dashboard page.',
-      mobile: 'Macbook and iphone mockup of the Vote Dashboard page.',
-    },
-    liveUrl: 'https://nylon-boldest-breakout-star-will.vercel.app',
-    githubUrl: 'https://github.com/aroan-v/vote-dashboard',
-  },
-  {
     id: 2,
     title: 'AI Macro Calculator',
     logoSrc: '/project-logos/ai-macro-calculator.jpg',
@@ -223,14 +160,76 @@ const highlightProjects = [
     liveUrl: 'https://ai-macro-calculator.vercel.app',
     githubUrl: 'https://github.com/aroan-v/forge-app',
   },
+  {
+    id: 1,
+    title: 'Vote Dashboard',
+    logoSrc: '/project-logos/vote-dashboard.jpg',
+    alt: 'Logo for the Vote Dashboard project',
+    // Assuming 'Highlight' is available in scope
+    description: (
+      <>
+        <p>
+          Fans will do anything to support their favorite artists—even lose sleep to vote in online
+          polls and awards shows. I saw this when I joined the effort to vote for Will Ashley, who
+          was nominated for Nylon’s Boldest Breakout Star.
+        </p>
+        <p>
+          {
+            "To make the voting more interesting, and to bring out the fandom's competitive side, I created an interactive vote tracker. It was a visual tool designed to reimagine the typically boring, straightforward poll result. Inspired by the dynamic and engaging vote displays of MTV EMAs and MTV Hottest, I built a system that showcased the results with a unique visual flair."
+          }
+        </p>
+
+        <p>
+          {'Using '}
+          <Highlight className="text-secondary font-bold">cron-job.org</Highlight>
+          {' and '}
+          <Highlight className="text-secondary font-bold">GitHub Actions</Highlight>
+          {
+            ', I took a snapshot of the vote standings every five minutes, from August 19 to September 1. This real-time data was fed directly into the dashboard, allowing us to see our progress in an exciting new way.'
+          }
+        </p>
+
+        <p>
+          We used the data to figure out our strategy, and even though we only made it to second
+          place, the whole thing proved to me how technology can rally a fandom and make even a
+          simple online poll feel like a true team effort.
+        </p>
+      </>
+    ),
+    technologies: ['Vercel', 'Tailwind CSS', 'Zustand', 'D3-Charts', 'Shadcn/UI', 'cronjob'],
+    badges: [
+      {
+        className: 'ds-badge-soft  ds-badge-primary',
+        items: ['Next.js'],
+      },
+      {
+        className: 'ds-badge-soft  ds-badge-secondary',
+        items: ['Tailwind CSS', 'Zustand', 'D3-Charts'],
+      },
+      {
+        className: 'ds-badge-soft  ds-badge-accent',
+        items: ['cronjob', 'Vercel', 'Github Actions', 'Shadcn/UI'],
+      },
+    ],
+    image: ['/projects/vote-dashboard.jpg'],
+    images: {
+      desktop: '/projects/dashboard-desktop.png',
+      mobile: '/projects/dashboard-mobile.png',
+    },
+    altImages: {
+      desktop: 'Ipad mockup of the Vote Dashboard page.',
+      mobile: 'Macbook and iphone mockup of the Vote Dashboard page.',
+    },
+    liveUrl: 'https://nylon-boldest-breakout-star-will.vercel.app',
+    githubUrl: 'https://github.com/aroan-v/vote-dashboard',
+  },
 ]
 
 const projects = [
   {
     id: 3,
     title: 'Tic-Tac-Toe Game',
-    description:
-      'This is my take on Tic-Tac-Toe — an interactive game where you can challenge a computer opponent with adjustable difficulty levels. It started as a simple console version and grew into a full DOM-based experience, complete with move analysis, strategic decision-making, and a flexible evaluation system.',
+    description: `This is my take on Tic-Tac-Toe — an interactive game where you can challenge a computer opponent with four difficulty levels; the AI knows different winning and blocking strategies and on each move either plays randomly or chooses a game-winning / player-blocking move, with the probability of using strategic moves increasing at higher difficulties.`,
     technologies: ['HTML', 'CSS', 'JavaScript'],
     image: ['/projects/tic-tac-toe.jpg'],
     images: [
