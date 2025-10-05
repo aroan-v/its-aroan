@@ -130,7 +130,7 @@ function CreativeProjectsSection() {
     <PaddingWrapper
       as="section"
       id="creative-archive"
-      className="relative mx-auto my-10 w-full scroll-mt-60 space-y-8 py-20"
+      className="relative mx-auto my-10 w-full scroll-mt-20 space-y-8 py-20"
     >
       <div className="mx-auto mb-16 max-w-2xl px-8 text-center">
         <h2 className="mb-4 text-4xl font-bold md:text-5xl">
