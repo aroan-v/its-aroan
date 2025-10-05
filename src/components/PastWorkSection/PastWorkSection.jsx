@@ -9,17 +9,17 @@ function PastWorkSection() {
   return (
     <PaddingWrapper
       as="section"
-      id="creative-footprint"
+      id="collaborations-and-impact"
       className="relative mb-30 flex min-w-screen scroll-mt-40 flex-col items-center gap-8 overflow-x-clip"
     >
       {/* Heading */}
       <div className="max-w-5xl px-8 text-center">
         <h2 className="mb-4 text-4xl font-bold md:text-5xl">
-          <span className="text-foreground text-shadow-md">Past Creative Works</span>
+          <span className="text-foreground text-shadow-md">Collaborations & Impact</span>
         </h2>
         <p className="text-foreground text-md leading-tight text-shadow-sm md:text-lg">
           Before diving into web development, I honed my craft in design. Here are some of the
-          companies, programs, and partners I worked with as a Creatives Manager, creating visuals,
+          companies, programs, and partners I worked with as a Creatives Lead, creating visuals,
           branding, and campaigns that built my creative foundation.
         </p>
       </div>

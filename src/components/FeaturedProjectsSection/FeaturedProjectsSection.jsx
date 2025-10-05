@@ -240,7 +240,7 @@ const projects = [
     ],
     badges: [
       {
-        className: 'ds-badge-outline  ds-badge-secondary',
+        className: 'ds-badge-soft  ds-badge-secondary',
         items: ['HTML', 'CSS', 'Javascript'],
       },
     ],
@@ -254,11 +254,11 @@ const projects = [
       'A block-based Battleships game built with a focus on smart computer and robust game logic. Supports Player vs Computer and Player vs Player modes. Core game logic is fully tested with Jest to ensure accurate hits, sinks, and turn management.',
     badges: [
       {
-        className: 'ds-badge-outline  ds-badge-secondary',
+        className: 'ds-badge-soft  ds-badge-secondary',
         items: ['HTML', 'CSS', 'Javascript'],
       },
       {
-        className: 'ds-badge-outline  ds-badge-foreground',
+        className: 'ds-badge-soft  ds-badge-foreground',
         items: ['Jest', 'Unit Testing'],
       },
     ],
@@ -280,7 +280,7 @@ const projects = [
     technologies: ['HTML', 'CSS', 'Javascript ES6'],
     badges: [
       {
-        className: 'ds-badge-outline  ds-badge-secondary',
+        className: 'ds-badge-soft  ds-badge-secondary',
         items: ['HTML', 'CSS', 'Javascript'],
       },
     ],

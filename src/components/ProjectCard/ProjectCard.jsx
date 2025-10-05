@@ -17,31 +17,36 @@ function ProjectCard({ project }) {
           src={project.image[0]}
           alt={project.images[0].alt}
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className={`inset-0transition-transform object-cover duration-500 group-hover:scale-105`}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
 
       <CardContent className="flex flex-col space-y-4 p-6">
-        <h3 className="text-foreground text-xl font-semibold">{project.title}</h3>
+        <div>
+          <h3 className="text-foreground mb-1 text-xl font-semibold">{project.title}</h3>
+          {/* Badges */}
+          <DaisyWrapper className="flex flex-wrap gap-2">
+            {project?.badges?.map((badge, index) =>
+              badge?.items?.map((item, i) => (
+                <div key={`${index}-${i}`} className={`ds-badge ${badge.className}`}>
+                  {item}
+                </div>
+              ))
+            )}
+          </DaisyWrapper>
+        </div>
 
-        {/* Badges */}
-
-        <DaisyWrapper className="flex flex-wrap gap-2">
-          {project?.badges?.map((badge, index) =>
-            badge?.items?.map((item, i) => (
-              <div key={`${index}-${i}`} className={`ds-badge ${badge.className}`}>
-                {item}
-              </div>
-            ))
-          )}
-        </DaisyWrapper>
-        <p className="text-muted-foreground mb-4 text-sm leading-relaxed">{project.description}</p>
+        <div className="text-muted-foreground space-y-4 text-sm leading-relaxed">
+          {project.description}
+        </div>
 
         {/* Buttons */}
         <CardAction>
-          <StyledAnchor url={project.liveUrl} mode="live" />
-          <StyledAnchor url={project.githubUrl} mode="github" />
+          {project.liveUrl && <StyledAnchor url={project.liveUrl} mode="live" />}
+          {project.githubUrl && <StyledAnchor url={project.githubUrl} mode="github" />}
+          {project.behanceUrl && <StyledAnchor url={project.behanceUrl} mode="behance" />}
+          {project.facebookUrl && <StyledAnchor url={project.facebookUrl} mode="facebook" />}
         </CardAction>
       </CardContent>
 

@@ -1,4 +1,5 @@
 import AboutMeSection from '@/components/AboutMeSection'
+import CreativeProjectsSection from '@/components/CreativeProjectsSection'
 import FeaturedProjectsSection from '@/components/FeaturedProjectsSection'
 import HeroSection from '@/components/HeroSection'
 import MissionStatementSection from '@/components/MissionStatementSection'
@@ -12,6 +13,7 @@ export default function Home() {
       <HeroSection />
       <MissionStatementSection />
       <FeaturedProjectsSection />
+      <CreativeProjectsSection />
       <PastWorkSection />
       <AboutMeSection />
     </>
