@@ -94,7 +94,7 @@ const highlightProjects = [
       desktop: 'Mac mockup of the Vote Page project.',
       mobile: 'Android phone mockup of the Vote Page project.',
     },
-    liveUrl: 'https://project-p5lze.vercel.app',
+    liveUrl: 'https://nylon-vote-tracker.vercel.app',
     githubUrl: 'https://github.com/aroan-v/nylon-vote-page',
   },
   {
@@ -220,7 +220,7 @@ const highlightProjects = [
       desktop: 'Ipad mockup of the Vote Dashboard page.',
       mobile: 'Macbook and iphone mockup of the Vote Dashboard page.',
     },
-    liveUrl: 'https://nylon-boldest-breakout-star-will.vercel.app',
+    liveUrl: 'https://nylon-vote-dashboard.vercel.app',
     githubUrl: 'https://github.com/aroan-v/vote-dashboard',
   },
 ]
