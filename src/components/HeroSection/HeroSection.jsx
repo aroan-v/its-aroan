@@ -40,7 +40,7 @@ function HeroSection() {
       <img src="/aroan-logo.svg" alt="Aroan's logo" className="h-auto w-1/2 max-w-lg" />
 
       <div className="from-primary to-secondary relative rounded-full bg-gradient-to-b p-[2px]">
-        <div className="rounded-full bg-black px-4 py-2">Junior Next.js Developer</div>
+        <div className="rounded-full bg-black px-4 py-2">Product Designer and Developer</div>
       </div>
 
       {/* Description */}

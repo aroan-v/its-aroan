@@ -37,11 +37,11 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata = {
-  title: 'Aroan | Junior Next.js Developer',
+  title: 'Aroan | Product Designer and Developer',
   description:
     'Turning ideas into projects through logical problem-solving, creative experimentation, and attention to detail. Builds modern, interactive applications on strong fundamentals.',
   openGraph: {
-    title: 'Aroan | Junior Next.js Developer',
+    title: 'Aroan | Product Designer and Developer',
     description:
       'Turning ideas into projects through logical problem-solving, creative experimentation, and attention to detail. Builds modern, interactive applications on strong fundamentals.',
     url: 'https://its-aroan.vercel.app',
@@ -59,7 +59,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Aroan | Junior Next.js Developer',
+    title: 'Aroan | Product Designer and Developer',
     description:
       'Turning ideas into projects through logical problem-solving, creative experimentation, and attention to detail.',
     images: ['https://its-aroan.vercel.app/link-preview.jpg'],
